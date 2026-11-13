@@ -1,0 +1,28 @@
+.language-switcher {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  max-inline-size: 100%;
+  padding: 4px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-light-pink);
+}
+.language-switcher button {
+  min-block-size: 44px;
+  padding-inline: var(--space-2);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+.language-switcher button:lang(en) { font-family: var(--font-english); }
+.language-switcher button:lang(ar) { font-family: var(--font-arabic); }
+.language-switcher button[aria-pressed='true'] {
+  background: var(--color-light-blue);
+  border-color: var(--color-primary);
+}
+.language-switcher button:hover { border-color: var(--color-primary); }

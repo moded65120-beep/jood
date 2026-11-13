@@ -1,0 +1,47 @@
+.nemo-header-actions { display:flex; align-items:center; gap:14px; }
+.nemo-about-trigger { position:relative; isolation:isolate; display:inline-flex; align-items:center; justify-content:center; gap:7px; min-height:46px; border:2px solid #2563eb; border-radius:28px; padding:11px 19px; color:#fff; background:#2563eb; font-size:16px; font-weight:700; line-height:1.4; white-space:nowrap; box-shadow:0 9px 25px #2563eb35; cursor:pointer; transition:background 220ms ease,border-color 220ms ease,box-shadow 220ms ease,transform 220ms ease; }
+.nemo-about-trigger svg { width:17px; height:17px; flex-shrink:0; stroke-width:2; }
+.nemo-about-trigger:hover { background:#1d4ed8; border-color:#1d4ed8; box-shadow:0 12px 32px #2563eb55; transform:scale(1.055); }
+.nemo-about-trigger:focus-visible { outline:3px solid #173b64; outline-offset:8px; }
+.nemo-about-trigger::before { content:''; position:absolute; inset:-5px; border:2px solid #86b6f4; border-radius:inherit; pointer-events:none; opacity:.45; animation:nemo-about-glow 3.8s 2.15s ease-in-out infinite; }
+.nemo-about-trigger::after { content:''; position:absolute; width:7px; height:7px; inset-inline-end:8px; top:4px; background:#f59e42; border:2px solid #fff1df; border-radius:50%; box-shadow:0 0 9px #f59e4266; pointer-events:none; }
+.nemo-about-trigger:hover::before,.nemo-about-trigger:focus-visible::before { animation:none; opacity:1; box-shadow:0 0 24px 5px #6ea7ed66; }
+.nemo-landing { --nemo-about-width:140px; --nemo-about-edge-gap:16px; --nemo-about-rail:calc(var(--nemo-about-width) + 2 * var(--nemo-about-edge-gap) + 56px); }
+.nemo-about-anchor { position:fixed; right:var(--nemo-about-edge-gap); top:30dvh; width:var(--nemo-about-width); z-index:3; transition:translate 780ms cubic-bezier(.65,0,.2,1),opacity 650ms ease,visibility 780ms; }
+.nemo-about-float { width:100%; animation:nemo-about-side-in 650ms 1.25s cubic-bezier(.16,1,.3,1) both,nemo-about-float 6s 1.9s ease-in-out infinite; }
+.nemo-about-float .nemo-about-trigger { width:100%; }
+.nemo-landing--ready .nemo-about-anchor { translate:0 -110dvh; opacity:0; visibility:hidden; }
+/* Reserve the same physical right rail in Arabic and English. */
+.nemo-landing .nemo-main { padding-right:var(--nemo-about-rail); }
+.nemo-about-tail { position:absolute; left:-9px; top:calc(50% - 6px); width:11px; height:12px; background:inherit; clip-path:polygon(0 50%,100% 0,100% 100%); pointer-events:none; }
+@keyframes nemo-about-side-in { 0% { opacity:0; translate:-40px 0; scale:.96; } 72% { opacity:1; translate:3px 0; scale:1.025; } 100% { opacity:1; translate:0 0; scale:1; } }
+@keyframes nemo-about-float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-5px); } }
+@keyframes nemo-about-glow { 0%,100% { opacity:.4; box-shadow:0 0 5px 0 #83b0ec22; } 50% { opacity:.85; box-shadow:0 0 21px 4px #83b0ec55; } }
+.nemo-about { position:fixed; inset:0; margin:0; border:0; width:100%; max-width:none; height:100dvh; max-height:none; padding:24px; color:#173b64; background:#e9f3fc55; backdrop-filter:blur(7px); -webkit-backdrop-filter:blur(7px); overscroll-behavior:contain; touch-action:pan-y; }
+.nemo-about[open] { display:flex; align-items:center; justify-content:center; animation:nemo-about-fade-in 240ms ease both; }
+.nemo-about::backdrop { background:#173b6424; }
+.nemo-about__panel { width:min(100%,680px); max-height:min(82dvh,660px); display:flex; flex-direction:column; min-height:0; border:1px solid #ffffffd9; border-radius:46px 70px 46px 46px; background:linear-gradient(145deg,#ffffffeb,#f4f9fff0); box-shadow:0 20px 70px #345e8620,inset 0 0 0 1px #d6e6f333; backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); overflow:hidden; animation:nemo-about-panel-in 240ms cubic-bezier(.16,1,.3,1) both; }
+.nemo-about__header { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-shrink:0; padding:28px 30px 20px; border-bottom:1px solid #deebf6; }
+.nemo-about h2 { font-size:clamp(20px,3vw,27px); line-height:1.5; margin:0; }
+.nemo-about__close { display:grid; place-items:center; flex-shrink:0; width:44px; height:44px; border:1px solid #d5e5f3; border-radius:50%; background:#eaf4ffb3; color:#476e94; cursor:pointer; transition:background 180ms ease; }
+.nemo-about__close:hover { background:#dcecfb; }
+.nemo-about__close svg { width:20px; height:20px; }
+.nemo-about__content { padding:24px 32px 32px; min-height:0; overflow-y:auto; overscroll-behavior:contain; touch-action:pan-y; scrollbar-width:thin; scrollbar-color:#b7cfe7 transparent; }
+.nemo-about__content p { margin:0; font-size:16px; line-height:1.95; color:#526e88; text-align:start; }
+.nemo-about[lang=ar] .nemo-about__content p { line-height:2.15; }
+.nemo-about--closing[open] { animation:nemo-about-fade-out 240ms ease both; }
+.nemo-about--closing .nemo-about__panel { animation:nemo-about-panel-out 240ms ease both; }
+@keyframes nemo-about-fade-in { from { opacity:0; } to { opacity:1; } }
+@keyframes nemo-about-fade-out { from { opacity:1; } to { opacity:0; } }
+@keyframes nemo-about-panel-in { from { opacity:0; transform:translateY(8px) scale(.95); } to { opacity:1; transform:none; } }
+@keyframes nemo-about-panel-out { from { opacity:1; transform:none; } to { opacity:0; transform:translateY(6px) scale(.97); } }
+@media(max-width:480px) { .nemo-landing .nomu-home__header { padding-inline:16px; gap:10px; } .nemo-header-actions { gap:6px; } .nemo-about-trigger { padding-inline:10px; font-size:11px; } .nemo-landing .language-switcher button { padding-inline:8px; font-size:12px; } .nemo-landing .nomu-home__brand { font-size:22px; gap:8px; } .nemo-about { padding:16px; } .nemo-about__panel { border-radius:30px 46px 30px 30px; } .nemo-about__header { padding:20px 20px 16px; gap:8px; } .nemo-about__content { padding:20px 24px 26px; } .nemo-about__content p { font-size:14px; } }
+@media(max-width:360px) { .nemo-landing .nomu-home__header { padding-inline:12px; gap:8px; } .nemo-header-actions { gap:4px; } .nemo-about-trigger { padding-inline:7px; } .nemo-landing .language-switcher button { padding-inline:6px; font-size:11px; } .nemo-landing .nomu-home__brand { font-size:20px; gap:6px; } }
+@media(prefers-reduced-motion:reduce) { .nemo-about[open],.nemo-about__panel,.nemo-about--closing .nemo-about__panel { animation:none; } .nemo-about-trigger,.nemo-about__close { transition:none; } }
+@media(max-width:1000px) { .nemo-landing { --nemo-about-width:128px; } .nemo-about-float .nemo-about-trigger { min-height:44px; font-size:15px; padding:10px 14px; } .nemo-about-trigger svg { width:17px; height:17px; } }
+@media(min-width:701px) and (max-width:1000px) { .nemo-landing .nemo-copy h1 { font-size:36px; } .nemo-landing .nemo-intro { font-size:14px; } }
+@media(max-width:700px) { .nemo-landing { --nemo-about-width:116px; --nemo-about-edge-gap:16px; } .nemo-about-anchor { top:22dvh; } .nemo-landing .nemo-main { padding-right:24px; } .nemo-landing .nemo-copy h1 { padding-right:calc(var(--nemo-about-width) + var(--nemo-about-edge-gap) + 48px); font-size:28px; text-align:start; } .nemo-family img { padding-block-end:50px; } }
+@media(prefers-reduced-motion:reduce) { .nemo-about-float,.nemo-about-trigger::before { animation:none; } .nemo-about-trigger:hover { transform:none; } .nemo-about-trigger::before { opacity:.3; } }
+@media(prefers-reduced-motion:reduce) { .nemo-about-anchor { transition:none; } }
+
+@media(max-width:700px) { .nemo-about-float .nemo-about-trigger { padding-inline:10px; } }

@@ -1,0 +1,14 @@
+﻿.nomu-doctor-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.nomu-doctor-card { display: grid; grid-template-columns: 88px minmax(0,1fr); gap: 16px; align-items: center; padding: 20px; background: #FFF8EE; border: 1px solid #f0e4de; border-radius: 24px; box-shadow: 0 5px 16px #26374f09; min-inline-size: 0; }
+.nomu-doctor-card.is-selected { border-color: #97bfe7; box-shadow: 0 0 0 2px #e5f0fc; }
+.nomu-doctor-card__portrait { inline-size: 88px; block-size: 108px; object-fit: cover; object-position: center top; border-radius: 48%; background: #f6e6e7; }
+.nomu-doctor-card__details { min-inline-size: 0; }
+.nomu-doctor-card h3 { font-size: 17px; margin: 0 0 12px; line-height: 1.5; overflow-wrap: anywhere; }
+.nomu-doctor-card__specialty { display: flex; gap: 8px; align-items: center; padding: 10px; border-radius: 18px; font-size: 13px; line-height: 1.5; margin: 0; }
+.nomu-doctor-card__specialty svg { flex-shrink: 0; }
+.nomu-doctor-card .tone-blue { background: #e4f1ff; color: #285682; }
+.nomu-doctor-card .tone-pink { background: #fce3ef; color: #7f4065; }
+.nomu-doctor-card button { grid-column: 1 / -1; min-block-size: 44px; border: 1px solid #ecd6d5; background: #fff !important; color: #183c64; border-radius: 24px; padding: 10px 16px; font-weight: 600; box-shadow: 0 2px 3px #38223806; }
+.nomu-doctor-card button:disabled { opacity: .55; cursor: not-allowed; }
+@media(max-width:1200px) { .nomu-doctor-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:650px) { .nomu-doctor-grid { grid-template-columns: minmax(0,1fr); } }

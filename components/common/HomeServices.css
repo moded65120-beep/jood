@@ -1,0 +1,69 @@
+.home-services { width: 100%; max-width: 1320px; flex-shrink: 0; padding-block: 72px 40px; color: #163a63; }
+.home-services__intro { max-width: 720px; margin-inline: auto; margin-bottom: 48px; text-align: center; }
+.home-services__intro h2 { margin-block: 18px 14px; font-size: clamp(28px,3vw,40px); line-height: 1.5; text-wrap: balance; scroll-margin-top: 24px; }
+.home-services__intro p { color: #64748b; font-size: 16px; line-height: 1.9; }
+.home-service { --image-offset: 28px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; column-gap: clamp(40px,7vw,112px); padding-block: 48px; min-width: 0; background: #fff; }
+.home-service--reverse { --image-offset: -28px; }
+.home-service__text { grid-column: 1; grid-row: 1; min-width: 0; padding-block: 24px; transition: opacity 700ms ease, transform 700ms cubic-bezier(.2,.7,.2,1); }
+.home-service__number { display: flex; gap: 14px; align-items: center; color: #2563eb; font-size: 13px; letter-spacing: .1em; margin-bottom: 22px; }
+.home-service__number span { height: 1px; width: 40px; background: #b5cdf5; }
+.home-service__text h2 { font-size: clamp(27px,2.7vw,39px); line-height: 1.55; text-wrap: balance; margin-bottom: 20px; }
+.home-service__text p { font-size: 17px; line-height: 1.95; color: #64748b; margin: 0; max-width: 570px; }
+.home-service__image { grid-column: 2; grid-row: 1; position: relative; margin: 0; min-width: 0; isolation: isolate; transition: opacity 850ms ease, transform 850ms cubic-bezier(.2,.7,.2,1); }
+.home-service__image img { display: block; width: 100%; height: clamp(300px,29vw,420px); object-fit: cover; border-radius: 110px 8px 8px 30px; }
+.home-service__image::before { content: ''; position: absolute; inset: -12px 16px 18px -12px; border: 1px solid #dbeafe; border-radius: 120px 8px 8px 30px; z-index: -1; }
+.home-service__image::after { content: ''; width: 72px; height: 72px; border: 12px solid #f5efe6; border-radius: 50%; position: absolute; inset-inline-start: -20px; bottom: -18px; z-index: -1; }
+.home-service--reverse .home-service__text { grid-column: 2; }
+.home-service--reverse .home-service__image { grid-column: 1; }
+.home-service--reverse .home-service__image img { border-radius: 8px 110px 30px 8px; }
+.nomu-home[dir=rtl] .home-service { --image-offset: -28px; }
+.nomu-home[dir=rtl] .home-service--reverse { --image-offset: 28px; }
+.nomu-home[dir=rtl] .home-service__image img { border-radius: 8px 110px 30px 8px; }
+.nomu-home[dir=rtl] .home-service--reverse .home-service__image img { border-radius: 110px 8px 8px 30px; }
+.home-service[data-reveal=pending] .home-service__image { opacity: 0; transform: translateX(var(--image-offset)); }
+.home-service[data-reveal=pending] .home-service__text { opacity: 0; transform: translateY(18px); }
+.home-service:focus-within .home-service__text,.home-service:focus-within .home-service__image { opacity: 1; transform: none; }
+@media(min-width:1600px) { .home-services { max-width: 1400px; } }
+@media(max-width:1000px) { .home-service { gap: 36px; padding-block: 36px; } .home-service__text p { font-size: 16px; } }
+@media(max-width:700px) { .home-services { padding-top: 48px; } .home-services__intro { margin-bottom: 12px; } .home-service { grid-template-columns: 1fr; gap: 24px; padding-block: 32px; } .home-service .home-service__text { grid-column: 1; grid-row: 1; padding: 0; } .home-service .home-service__image { grid-column: 1; grid-row: 2; margin-inline: 8px; } .home-service__image img { height: clamp(260px,70vw,360px); } .home-service__text h2 { font-size: 28px; margin-bottom: 14px; } .home-service__number { margin-bottom: 14px; } }
+@media(prefers-reduced-motion:reduce) { .home-service .home-service__image,.home-service .home-service__text { opacity: 1; transform: none; transition: none; } }
+/* Service-specific motion and a scroll-linked journey rail. */
+.home-services { position: relative; --journey-progress: 1; }
+.home-services__journey { position: absolute; inset-inline-start: -24px; top: 260px; bottom: 90px; width: 2px; background: #eef4fe; pointer-events: none; }
+.home-services__journey span { display: block; width: 100%; height: 100%; background: #8bb2f2; transform: scaleY(var(--journey-progress)); transform-origin: top; }
+.home-service { --entry-x: 100px; --text-x: -44px; }
+.home-service--reverse { --entry-x: -100px; --text-x: 44px; }
+.nomu-home[dir=rtl] .home-service { --entry-x: -100px; --text-x: 44px; }
+.nomu-home[dir=rtl] .home-service--reverse { --entry-x: 100px; --text-x: -44px; }
+.home-service__mask { overflow: hidden; border-radius: 110px 8px 8px 30px; clip-path: inset(0 round 0); transition: clip-path 1100ms cubic-bezier(.16,1,.3,1); }
+.home-service__mask img { border-radius: 0 !important; transform: translateY(var(--photo-drift,0px)) scale(1.065); transition: scale 800ms ease; }
+.home-service__image:hover img { scale: 1.025; }
+.home-service--reverse .home-service__mask,.nomu-home[dir=rtl] .home-service__mask { border-radius: 8px 110px 30px 8px; }
+.nomu-home[dir=rtl] .home-service--reverse .home-service__mask { border-radius: 110px 8px 8px 30px; }
+.home-service__image { transition: opacity 1000ms ease, transform 1100ms cubic-bezier(.16,1,.3,1); }
+.home-service__text { transition: opacity 800ms .15s ease, transform 950ms .15s cubic-bezier(.16,1,.3,1); }
+.home-service__text h2,.home-service__text p { transition: opacity 800ms .2s ease, transform 800ms .2s cubic-bezier(.16,1,.3,1); }
+.home-service__text p { transition-delay: .32s; }
+.home-service[data-reveal=pending] .home-service__image { transform: translateX(var(--entry-x)); }
+.home-service[data-reveal=pending] .home-service__text { transform: translateX(var(--text-x)); }
+.home-service--growth[data-reveal=pending] .home-service__image { transform: translateY(24px); }
+.home-service--growth[data-reveal=pending] .home-service__mask { clip-path: inset(6% 22% 6% 0 round 180px); }
+.home-service--growth[data-reveal=pending] h2,.home-service--growth[data-reveal=pending] p { transform: translateY(20px); opacity: 0; }
+.home-service--appointments .home-service__text { transition-delay: .3s; }
+.home-service__heading-line { display: block; width: 72px; height: 2px; background: #2563eb; margin-top: 18px; transform: scaleX(1); transform-origin: left; transition: transform 900ms .35s cubic-bezier(.16,1,.3,1); }
+.nomu-home[dir=rtl] .home-service__heading-line { transform-origin: right; }
+.home-service[data-reveal=pending] .home-service__heading-line { transform: scaleX(0); }
+.home-service__stroke { position: absolute; inset: -18px -14px 0; width: calc(100% + 28px); height: calc(100% + 18px); fill: none; stroke: #8eb4f2; stroke-width: 1.4; stroke-dasharray: 1; stroke-dashoffset: 0; transition: stroke-dashoffset 1300ms .25s ease; pointer-events: none; }
+.home-service[data-reveal=pending] .home-service__stroke { stroke-dashoffset: 1; }
+.home-service--records .home-service__stroke { display: none; }
+.home-service--growth .home-service__stroke { stroke: #2563eb; stroke-width: 2; }
+.home-service--appointments .home-service__stroke { transition-delay: .55s; }
+.home-service__image::before { transform: translateY(var(--accent-drift,0px)); }
+.home-service__image::after { transform: translateY(var(--photo-drift,0px)); }
+.home-service__image:hover .home-service__stroke { stroke: #2563eb; }
+@media(max-width:700px) { .home-service { --entry-x: 36px !important; --text-x: -20px !important; } .home-services__journey { inset-inline-start: -14px; top: 280px; } .home-service__mask { border-radius: 70px 8px 8px 24px; } }
+@media(prefers-reduced-motion:reduce) { .home-service .home-service__mask,.home-service .home-service__image,.home-service .home-service__text,.home-service .home-service__text h2,.home-service .home-service__text p,.home-service .home-service__heading-line,.home-service .home-service__stroke { opacity: 1; transform: none; clip-path: none; transition: none; stroke-dashoffset: 0; } .home-service__image:hover img { scale: 1; } .home-services__journey span { transform: none; } }
+@media(prefers-reduced-motion:reduce) {
+  .home-service[data-reveal=pending] .home-service__image,.home-service[data-reveal=pending] .home-service__text,.home-service[data-reveal=pending] .home-service__mask,.home-service[data-reveal=pending] h2,.home-service[data-reveal=pending] p,.home-service[data-reveal=pending] .home-service__heading-line { opacity: 1; transform: none; clip-path: none; transition: none; }
+  .home-service[data-reveal=pending] .home-service__stroke { stroke-dashoffset: 0; }
+}

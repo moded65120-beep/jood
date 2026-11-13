@@ -1,0 +1,40 @@
+.nomu-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-inline-size: 0;
+}
+
+.nomu-field__label {
+  color: var(--color-text);
+  font-weight: var(--font-weight-subheading);
+}
+
+.nomu-input {
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: var(--space-6);
+  padding: var(--space-1) var(--space-2);
+  color: var(--color-text);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nomu-input::placeholder { color: var(--color-muted); opacity: 1; }
+.nomu-input:hover:not(:disabled) { border-color: var(--color-primary); }
+.nomu-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-focus);
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+.nomu-input:disabled {
+  background: var(--color-background);
+  color: var(--color-muted);
+  cursor: not-allowed;
+}
+
+.nomu-input[aria-invalid='true'] { border-style: dashed; border-color: var(--color-text); }

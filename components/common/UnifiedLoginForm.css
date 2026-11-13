@@ -1,0 +1,20 @@
+﻿.unified-login { inline-size: min(100%, 440px); border: 1px solid #e2e8f0; border-top: 3px solid #dbeafe; border-radius: 12px; background: #fff; padding: clamp(24px,4vw,36px); color: #1e3a5f; box-shadow: 0 4px 20px #1e3a5f04; }
+.unified-login__brand { display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 27px; font-weight: 700; margin-block: 16px 28px; }
+.unified-login__brand > span:first-child { position: relative; letter-spacing: -1.5px; }
+.unified-login h1 { text-align: center; font-size: 25px; line-height: 1.5; margin-bottom: 8px; }
+.unified-login > p { text-align: center; font-size: 14px; color: #64748b; line-height: 1.8; }
+.unified-login form { display: grid; gap: 10px; margin-block: 28px 24px; }
+.unified-login label { font-size: 13px; font-weight: 600; margin-top: 8px; }
+.unified-login input { inline-size: 100%; min-inline-size: 0; min-block-size: 48px; background: white; color: #1e3a5f; border: 1px solid #cbd5e1; border-radius: 7px; padding: 10px 12px; font: inherit; }
+.unified-login__password { display: flex; align-items: center; border: 1px solid #cbd5e1; border-radius: 7px; background: white; }
+.unified-login__password input { border: 0; flex: 1; border-radius: 7px; }
+.unified-login__password button { background: transparent; border: 0; color: #64748b; cursor: pointer; min-inline-size: 46px; min-block-size: 46px; border-radius: 7px; }
+.unified-login svg { inline-size: 22px; block-size: 22px; vertical-align: middle; flex-shrink: 0; }
+.unified-login__error { display: flex; align-items: flex-start; gap: 9px; padding: 12px; border-radius: 7px; color: #a1243e; background: #fff5f5; border: 1px solid #f5cbd3; font-size: 13px; }
+.unified-login__submit { inline-size: 100%; margin-top: 14px; min-height: 48px; border: 1px solid #2563eb; border-radius: 7px; background: #2563eb; color: #fff; font-weight: 700; cursor: pointer; }
+.unified-login__submit:hover { background: #1d4ed8; }
+.unified-login__signup { display: flex; align-items: center; justify-content: center; min-height: 44px; text-align: center; color: #245da6; font-size: 13px; font-weight: 600; }
+.unified-login small { display: block; text-align: center; color: #64748b; font-size: 11px; margin-top: 20px; line-height: 1.7; padding-top: 16px; border-top: 1px solid #f5efe6; }
+.unified-login :focus-visible { outline: 3px solid #2563eb; outline-offset: 3px; }
+.unified-login :disabled { opacity: .65; cursor: wait; }
+.unified-login .unified-login__success { padding: 12px; border-radius: 7px; color: #21634c; background: #e5f6ef; }

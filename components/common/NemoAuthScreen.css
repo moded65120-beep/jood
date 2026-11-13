@@ -1,0 +1,46 @@
+﻿.nemo-auth { --auth-side:100%; position:absolute; inset:0; z-index:4; background:var(--nemo-screen-background,linear-gradient(145deg,#FFFFFF 0%,#F4F9FF 100%)); padding:112px clamp(24px,5vw,80px) 24px; overflow-y:auto; overscroll-behavior:contain; animation:nemo-auth-enter 650ms cubic-bezier(.16,1,.3,1) both; }
+.nemo-landing[dir=rtl] .nemo-auth { --auth-side:-100%; }
+.nemo-auth--leaving { animation:nemo-auth-exit 650ms cubic-bezier(.65,0,.2,1) both; }
+.nemo-auth__back { position:relative; display:inline-flex; align-items:center; gap:8px; min-height:44px; border:0; background:transparent; color:#476b8e; font-size:13px; cursor:pointer; }
+.nemo-auth__back svg { width:17px; height:17px; }
+.nemo-landing[dir=rtl] .nemo-auth__back svg { transform:rotate(180deg); }
+.nemo-auth__shell { min-height:calc(100% - 44px); display:flex; align-items:center; justify-content:center; padding-block:16px; }
+.nemo-auth__card { width:min(100%,470px); border:1px solid #cfe1f5; border-radius:42px 70px 42px 42px; background:linear-gradient(145deg,#FFFFFF,#F4F9FF); padding:clamp(24px,3vw,36px); box-shadow:0 14px 50px #779fc114; }
+.nemo-auth__icon { display:grid; place-items:center; width:48px; height:48px; border-radius:50%; background:#d7e9fc; color:#427ead; margin:0 auto 16px; }
+.nemo-auth__icon svg { width:23px; height:23px; }
+.nemo-auth h1 { font-size:27px; line-height:1.5; text-align:center; margin-bottom:8px; }
+.nemo-auth h1:focus { outline:none; }
+.nemo-auth__card > p { font-size:13px; line-height:1.8; color:#617b94; text-align:center; }
+.nemo-auth__modes { display:flex; gap:4px; padding:4px; border:1px solid #cadff4; border-radius:30px; background:#dfedfc; margin-block:22px; }
+.nemo-auth__modes button { flex:1; padding:9px 12px; min-height:44px; border:1px solid transparent; border-radius:26px; background:transparent; color:#536f8a; font-weight:600; cursor:pointer; }
+.nemo-auth__modes button[aria-pressed=true] { background:#f4f9ff; border-color:#c6dcf4; color:#173b64; }
+.nemo-auth form { display:grid; gap:15px; margin-top:22px; }
+.nemo-auth__field { min-width:0; }
+.nemo-auth label { display:block; color:#244d74; font-size:13px; font-weight:600; margin-bottom:7px; }
+.nemo-auth__input-wrap { position:relative; }
+.nemo-auth input { width:100%; min-width:0; min-height:48px; padding:11px 15px; border:1px solid #c3d9f0; border-radius:16px; color:#173b64; background:#edf6ff; font:inherit; font-size:14px; }
+.nemo-auth input::placeholder { color:#6b86a0; opacity:1; }
+.nemo-auth input:focus { outline:2px solid #7cace2; outline-offset:2px; }
+.nemo-auth input[aria-invalid=true] { border-color:#b45559; }
+.nemo-auth input[name=password] { padding-inline-end:50px; }
+.nemo-auth__visibility { display:grid; place-items:center; position:absolute; inset-inline-end:2px; top:2px; width:44px; height:44px; border:0; background:transparent; color:#577d9f; cursor:pointer; border-radius:14px; }
+.nemo-auth__visibility svg { width:19px; height:19px; }
+.nemo-auth .nemo-auth__error { font-size:12px; color:#9c3b45; line-height:1.7; margin:6px 0 0; }
+.nemo-auth__error--form { padding:10px 12px; border:1px solid #d8b8bf; border-radius:12px; }
+.nemo-auth__submit { min-height:48px; padding:12px 20px; margin-top:5px; border:1px solid #b9d3ef; border-radius:25px; background:#dfedfc; box-shadow:0 4px 14px #47749d0d; color:#173b64; font-weight:700; cursor:pointer; transition:background 220ms ease; }
+.nemo-auth__submit:hover { background:#c4def7; }
+.nemo-auth :disabled { opacity:.6; cursor:wait; }
+.nemo-auth small,.nemo-auth .nemo-auth__hint { display:block; font-size:11px; color:#617b94; line-height:1.8; text-align:center; margin:18px 0 0; }
+.nemo-auth .nemo-auth__success { color:#27685f; border:1px solid #b7d2d6; border-radius:12px; padding:10px; }
+@keyframes nemo-auth-enter { from { transform:translateX(var(--auth-side)); } to { transform:translateX(0); } }
+@keyframes nemo-auth-exit { from { transform:translateX(0); } to { transform:translateX(var(--auth-side)); } }
+@media(max-width:700px) { .nemo-auth { padding-top:100px; } .nemo-auth__card { border-radius:32px 50px 32px 32px; } }
+@media(max-height:760px) and (min-width:701px) { .nemo-auth { padding-top:96px; } }
+@media(prefers-reduced-motion:reduce) { .nemo-auth { animation:none; } }
+/* A downward return reveals the original oval instead of exiting sideways. */
+.nemo-auth__gesture-hint { display:flex; justify-content:center; align-items:center; gap:9px; min-height:44px; margin:0; color:#617b94; font-size:12px; line-height:1.7; }
+.nemo-auth__gesture-hint svg { width:18px; height:18px; color:#4d84b4; animation:nemo-hint-down 2.4s ease-in-out infinite; }
+.nemo-auth--leaving { animation:nemo-auth-down 780ms cubic-bezier(.65,0,.2,1) both; }
+@keyframes nemo-auth-down { from { transform:translateY(0); opacity:1; } to { transform:translateY(100dvh); opacity:.35; } }
+@keyframes nemo-hint-down { 0%,100% { transform:translateY(-3px); } 50% { transform:translateY(3px); } }
+@media(prefers-reduced-motion:reduce) { .nemo-auth__gesture-hint svg,.nemo-auth--leaving { animation:none; } }

@@ -1,0 +1,24 @@
+.nomu-logo-symbol {
+  position: absolute;
+  inline-size: 34px;
+  block-size: 26px;
+  inset-inline-end: 0;
+  inset-block-start: -27px;
+  transform: scale(var(--nomu-logo-symbol-scale, .65));
+  transform-origin: bottom right;
+  pointer-events: none;
+}
+.nomu-logo-symbol::before,
+.nomu-logo-symbol::after {
+  content: '';
+  position: absolute;
+  inline-size: 17px;
+  block-size: 25px;
+  background: linear-gradient(130deg, var(--color-primary), var(--color-light-blue));
+  border-radius: 3px 90% 3px 90%;
+  transform: rotate(-18deg);
+}
+.nomu-logo-symbol::after {
+  inset-inline-start: 17px;
+  transform: scaleX(-1) rotate(-18deg);
+}

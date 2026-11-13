@@ -1,0 +1,27 @@
+/* Shared login route only. No Home, registration or dashboard selectors. */
+.nomu-home--login { position:relative; isolation:isolate; background:radial-gradient(ellipse at 12% 8%,#f9d8e859,transparent 42%),radial-gradient(ellipse at 85% 72%,#f9d8e842,transparent 42%),radial-gradient(ellipse at 18% 85%,#d7e9ff8c,transparent 48%),#f8fbff; }
+.nomu-home--login::before,.nomu-home--login::after { content:''; position:absolute; z-index:-1; pointer-events:none; inline-size:min(58vw,800px); block-size:180px; border-radius:70% 55% 0 0; opacity:.6; }
+.nomu-home--login::before { inset-inline-start:-12%; inset-block-end:-90px; background:linear-gradient(145deg,#D7E9FF,#e9f3ff); transform:rotate(8deg); }
+.nomu-home--login::after { inset-inline-end:-15%; inset-block-end:-70px; background:linear-gradient(145deg,#fcecf4,#F9D8E8); transform:rotate(-12deg); }
+.nomu-home--login .nomu-home__login { background:transparent; padding-block:16px 28px; }
+.nomu-home--login .nomu-home__login::before,.nomu-home--login .nomu-home__login::after { content:none; }
+.nomu-home--login .nomu-home__back { background:transparent; color:#183b68; border-radius:12px; }
+.nomu-home--login .nomu-home__back:hover { background:#d7e9ff66; }
+.nomu-home--login .language-switcher { background:#ffffffbd; border:1px solid #d3e2f6; border-radius:999px; }
+.nomu-home--login .language-switcher button[aria-pressed=true] { background:#D7E9FF; color:#183B68; }
+.nomu-home--login .unified-login { min-inline-size:0; border:1px solid #d3e2f6; border-radius:24px; background:radial-gradient(ellipse at 100% 0%,#d7e9ff70,transparent 26%),radial-gradient(ellipse at 0% 100%,#f9d8e84a,transparent 22%),#ffffffed; color:#183b68; box-shadow:0 16px 48px #648bb71a,0 4px 14px #183b6808; animation:nomu-login-enter 260ms ease-out both; }
+.nomu-home--login .unified-login input { background:#f8fbff; color:#183b68; border-color:#cedef2; border-radius:12px; transition:border-color 160ms ease,box-shadow 160ms ease,background 160ms ease; }
+.nomu-home--login .unified-login input::placeholder { color:#6b80a0; opacity:1; }
+.nomu-home--login .unified-login__password { border-color:#cedef2; border-radius:12px; background:#f8fbff; transition:border-color 160ms ease,box-shadow 160ms ease; }
+.nomu-home--login .unified-login__password input { background:transparent; }
+.nomu-home--login .unified-login__password button { display:grid; place-items:center; border-radius:12px; }
+.nomu-home--login .unified-login input:focus-visible { outline:none; border-color:#81a9e1; box-shadow:0 0 0 3px #d7e9ff80; background:#fff; }
+.nomu-home--login .unified-login__password:focus-within { border-color:#81a9e1; box-shadow:0 0 0 3px #d7e9ff80; }
+.nomu-home--login .unified-login__password input:focus-visible { box-shadow:none; }
+.nomu-home--login .unified-login input[aria-invalid=true],.nomu-home--login .unified-login__password:has(input[aria-invalid=true]) { border-color:#cd6d82; }
+.nomu-home--login .unified-login__submit { border-radius:12px; transition:background 160ms ease,box-shadow 160ms ease,transform 160ms ease; }
+.nomu-home--login .unified-login__submit:hover:not(:disabled) { background:#1d4ed8; box-shadow:0 5px 14px #2563eb24; }
+.nomu-home--login .unified-login__submit:active:not(:disabled) { transform:translateY(1px); }
+@keyframes nomu-login-enter { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+@media(max-width:600px) { .nomu-home--login .nomu-home__login { padding-inline:20px; gap:18px; } .nomu-home--login::before,.nomu-home--login::after { inline-size:90vw; block-size:140px; } .nomu-home--login .unified-login { border-radius:20px; } }
+@media(prefers-reduced-motion:reduce) { .nomu-home--login .unified-login { animation:none; } .nomu-home--login .unified-login input,.nomu-home--login .unified-login__password,.nomu-home--login .unified-login__submit { transition:none; } .nomu-home--login .unified-login__submit:active:not(:disabled) { transform:none; } }

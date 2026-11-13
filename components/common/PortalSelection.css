@@ -1,0 +1,16 @@
+.home-portals { position: absolute; inset: 0; background: #fff; overflow-y: auto; padding: 24px clamp(24px,5vw,80px); display: flex; flex-direction: column; color: #163a63; }
+.home-portals__content { width: min(100%,820px); margin: auto; padding-block: 40px; text-align: center; }
+.home-portals h1 { font-size: clamp(30px,4vw,46px); margin-block: 24px 16px; }
+.home-portals__content > p { color: #64748b; line-height: 1.8; }
+.home-portals__choices { display: grid; grid-template-columns: repeat(2,1fr); gap: 24px; margin-block: 36px 24px; }
+.home-portals__choice { text-align: start; padding: 32px; border: 1px solid #dbeafe; border-radius: 18px; text-decoration: none; background: #fff; transition: transform 250ms ease,border-color 250ms ease; }
+.home-portals__choice:hover { transform: translateY(-4px); border-color: #2563eb; }
+.home-portals__icon { width: 30px; height: 30px; color: #2563eb; margin-bottom: 24px; }
+.home-portals__choice h2 { font-size: 23px; }
+.home-portals__choice p { color: #64748b; font-size: 14px; line-height: 1.9; }
+.home-portals__choice > span { display: flex; align-items: center; gap: 12px; margin-top: 24px; color: #2563eb; font-size: 14px; font-weight: 600; }
+.home-portals__choice > span svg { width: 18px; }
+.home-portals small { color: #64748b; }
+.nomu-home[dir=rtl] .home-portals__choice > span svg { transform: rotate(180deg); }
+@media(max-width:600px) { .home-portals__choices { grid-template-columns: 1fr; gap: 16px; } .home-portals__choice { padding: 24px; } }
+@media(prefers-reduced-motion:reduce) { .home-portals__choice { transition: none; } .home-portals__choice:hover { transform: none; } }

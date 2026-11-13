@@ -1,0 +1,10 @@
+.nomu-card {
+  min-inline-size: 0;
+  padding: var(--space-3);
+  background: var(--color-white);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow-wrap: anywhere;
+}

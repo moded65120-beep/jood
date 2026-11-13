@@ -1,0 +1,48 @@
+.nomu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  min-block-size: var(--space-6);
+  max-inline-size: 100%;
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  font-weight: var(--font-weight-subheading);
+  line-height: var(--line-height-body);
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nomu-button--primary {
+  color: var(--color-button-text);
+  background: var(--color-primary);
+}
+
+.nomu-button--secondary {
+  color: var(--color-text);
+  background: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.nomu-button--accent {
+  color: var(--color-button-text);
+  background: var(--color-accent);
+}
+
+.nomu-button--primary:hover:not(:disabled),
+.nomu-button--secondary:hover:not(:disabled) {
+  background: var(--color-light-blue);
+  border-color: var(--color-primary);
+}
+
+.nomu-button--accent:hover:not(:disabled) {
+  background: var(--color-light-pink);
+  border-color: var(--color-accent);
+}
+
+.nomu-button:focus-visible { box-shadow: var(--shadow-focus); }
+.nomu-button:disabled { opacity: 0.55; cursor: not-allowed; }
