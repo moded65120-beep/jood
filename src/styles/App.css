@@ -1,0 +1,10 @@
+﻿.app {
+  padding-block: 3rem;
+  padding-inline: 1.5rem;
+  text-align: start;
+}
+
+.app h1 {
+  margin: 0;
+  font-size: 2rem;
+}

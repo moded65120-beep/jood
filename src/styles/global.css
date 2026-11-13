@@ -1,0 +1,102 @@
+@import './variables.css';
+
+:root {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: var(--font-weight-body);
+  line-height: var(--line-height-body);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-inline-size: 0;
+  min-block-size: 100vh;
+  font-family: var(--font-body);
+  text-align: start;
+  overflow-wrap: anywhere;
+}
+
+:lang(ar) {
+  font-family: var(--font-arabic);
+}
+
+#root {
+  min-inline-size: 0;
+  min-block-size: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-block: 0 var(--space-2);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+}
+
+h1 { font-size: clamp(var(--font-size-xl), 5vw, var(--font-size-2xl)); }
+h2 { font-size: var(--font-size-xl); }
+h3 { font-size: var(--font-size-lg); }
+h4, h5, h6 { font-size: var(--font-size-base); }
+p { margin-block: 0 var(--space-2); }
+
+button, input, select, textarea { font: inherit; }
+img, video, svg { max-inline-size: 100%; }
+img, video { block-size: auto; }
+
+a {
+  color: var(--color-text);
+  text-decoration-color: var(--color-primary);
+  text-underline-offset: 0.2em;
+}
+
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+/* Optional utilities: add these only when a feature needs them. */
+.nomu-container {
+  inline-size: 100%;
+  max-inline-size: var(--content-width);
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+}
+
+.nomu-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.nomu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: var(--space-3);
+}
+
+.nomu-grid > *, .nomu-stack > * { min-inline-size: 0; }
+.nomu-muted { color: var(--color-muted); }
+.nomu-subheading { font-weight: var(--font-weight-subheading); }
+
+@media (max-width: 40rem) {
+  .nomu-container { padding-inline: var(--space-2); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+  }
+}
