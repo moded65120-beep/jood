@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS nomu_app CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE nomu_app;
+-- Import this file into the selected database (for example, jood1) using phpMyAdmin.
+-- The database itself must already exist in Plesk.
 
 CREATE TABLE IF NOT EXISTS users (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS users (
   password_hash VARCHAR(255) NOT NULL,
   role ENUM('mother','doctor') NOT NULL DEFAULT 'mother',
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS children (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS children (
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_children_parent FOREIGN KEY (parent_user_id) REFERENCES users(id) ON DELETE CASCADE,
   INDEX idx_children_parent (parent_user_id)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS growth_measurements (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS growth_measurements (
   created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   CONSTRAINT fk_growth_child FOREIGN KEY (child_id) REFERENCES children(id) ON DELETE CASCADE,
   INDEX idx_growth_child_date (child_id, measured_on)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS vaccinations (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS vaccinations (
   notes VARCHAR(1000) NULL,
   CONSTRAINT fk_vaccinations_child FOREIGN KEY (child_id) REFERENCES children(id) ON DELETE CASCADE,
   INDEX idx_vaccinations_child_due (child_id, due_on)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS milestones (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS milestones (
   updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   CONSTRAINT fk_milestones_child FOREIGN KEY (child_id) REFERENCES children(id) ON DELETE CASCADE,
   INDEX idx_milestones_child (child_id)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS appointments (
   id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -69,4 +69,4 @@ CREATE TABLE IF NOT EXISTS appointments (
   CONSTRAINT fk_appointments_parent FOREIGN KEY (parent_user_id) REFERENCES users(id) ON DELETE CASCADE,
   CONSTRAINT fk_appointments_child FOREIGN KEY (child_id) REFERENCES children(id) ON DELETE SET NULL,
   INDEX idx_appointments_parent_time (parent_user_id, requested_for)
-) ENGINE=InnoDB;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
