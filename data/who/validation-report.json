@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "sourceFilesVerified": 15,
+  "workbooks": 12,
+  "sourceRows": 22284,
+  "normalizedRows": 11142,
+  "results": [
+    {
+      "file": "reference/wfa-male.json",
+      "rows": 1857,
+      "maxZScoreReconstructionError": 0.0005000000000023874,
+      "maxMedianRoundingError": 0.0005000000000023874,
+      "sha256": "2a44a6d4e76a14f6c0aab25bda3a1d2e6328a426a11320d896f4b807f760f400",
+      "workbookCreated": "2020-11-10T15:34:48Z",
+      "workbookModified": "2022-08-24T09:10:44Z"
+    },
+    {
+      "file": "reference/wfa-female.json",
+      "rows": 1857,
+      "maxZScoreReconstructionError": 0.0005000000000023874,
+      "maxMedianRoundingError": 0.0005000000000023874,
+      "sha256": "a67d813d34aa526929556404a22a0dddb31fd0785da8789e5fe0116e308448ae",
+      "workbookCreated": "2020-11-10T15:35:16Z",
+      "workbookModified": "2022-08-24T08:46:46Z"
+    },
+    {
+      "file": "reference/lhfa-male.json",
+      "rows": 1857,
+      "maxZScoreReconstructionError": 0.0005000000000023874,
+      "maxMedianRoundingError": 0.0005000000000023874,
+      "sha256": "ced3cb9b438ff52e95795d17318737f0506c53ecd0c3cd6b0dbc00d7e888ab77",
+      "workbookCreated": "2020-11-10T15:33:19Z",
+      "workbookModified": "2022-08-24T09:09:30Z"
+    },
+    {
+      "file": "reference/lhfa-female.json",
+      "rows": 1857,
+      "maxZScoreReconstructionError": 0.0005000000000023874,
+      "maxMedianRoundingError": 0.0005000000000023874,
+      "sha256": "321eb590a816dcb8dd24af27b2276d21fc659ea43a99a1e8a133fa3545c88b8f",
+      "workbookCreated": "2020-11-10T15:33:34Z",
+      "workbookModified": "2022-08-24T11:56:43Z"
+    },
+    {
+      "file": "reference/hcfa-male.json",
+      "rows": 1857,
+      "maxZScoreReconstructionError": 0.0005000000000023874,
+      "maxMedianRoundingError": 0.0005000000000023874,
+      "sha256": "3e842f0949c8abc970168e866063baeba34839acb39867e8cd519bfdc217fcc6",
+      "workbookCreated": "2020-11-10T15:32:54Z",
+      "workbookModified": "2022-08-24T11:58:20Z"
+    },
+    {
+      "file": "reference/hcfa-female.json",
+      "rows": 1857,
+      "maxZScoreReconstructionError": 0.0005000000000023874,
+      "maxMedianRoundingError": 0.0005000000000023874,
+      "sha256": "4ad5a9a3ed2c5e302614528b5dff655b21567c4404e9a61fc1779b46cace68dd",
+      "workbookCreated": "2020-11-10T15:33:06Z",
+      "workbookModified": "2022-08-24T11:57:39Z"
+    }
+  ]
+}
