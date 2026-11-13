@@ -1,0 +1,31 @@
+﻿.mother-booking { color: var(--color-text); }
+.mother-booking__heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-block-end: 16px; }
+.mother-booking__heading h1 { margin: 0; font-size: var(--font-size-2xl); }
+.mother-booking__notice { color: var(--color-muted); }
+.mother-booking form { display: grid; gap: 24px; }
+.mother-booking__field { display: grid; gap: 8px; margin-block: 16px; font-weight: 600; }
+.mother-booking select, .mother-booking textarea { inline-size: 100%; min-inline-size: 0; border: 1px solid var(--color-border); border-radius: 10px; padding: 12px; color: var(--color-text); background: #fff; }
+.mother-booking textarea { resize: vertical; }
+.mother-booking fieldset { min-inline-size: 0; border: 0; padding: 0; margin-block: 24px; }
+.mother-booking legend { font-size: 20px; font-weight: 600; margin-block-end: 12px; }
+.mother-booking__doctors { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.mother-booking__doctor, .mother-booking__slot { display: flex; align-items: center; gap: 10px; padding: 16px; border: 2px solid #e2ecfa; border-radius: 16px; background: var(--color-light-blue); cursor: pointer; }
+.mother-booking__doctor strong, .mother-booking__doctor span span, .mother-booking__slot small { display: block; }
+.mother-booking__doctor span span { margin-block-start: 8px; color: var(--color-muted); }
+.mother-booking__slots { display: flex; flex-wrap: wrap; gap: 12px; }
+.mother-booking .is-selected { border-color: var(--color-accent); background: var(--color-light-pink); }
+.mother-booking .is-unavailable { background: #eef0f3; color: #687181; cursor: not-allowed; }
+.mother-booking input[type='radio'] { accent-color: var(--color-primary); flex-shrink: 0; }
+.mother-booking__summary dl { display: grid; gap: 12px; }
+.mother-booking__summary dl > div { display: grid; grid-template-columns: 160px minmax(0,1fr); gap: 16px; }
+.mother-booking__summary dd { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.mother-booking__summary dt { color: var(--color-muted); }
+.mother-booking .nomu-button { background: var(--color-light-blue); }
+.mother-booking .nomu-button:disabled { cursor: not-allowed; opacity: .6; }
+.mother-booking__error { color: #a1274a; }
+@media(max-width: 1100px) { .mother-booking__doctors { grid-template-columns: minmax(0,1fr); } }
+@media(max-width: 600px) { .mother-booking__heading { flex-direction: column; align-items: stretch; } .mother-booking__summary dl > div { grid-template-columns: minmax(0,1fr); gap: 4px; } }
+
+.mother-booking__dates { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); gap: 12px; }
+.mother-booking .mother-booking__date, .mother-booking button.mother-booking__slot { border: 2px solid #e2ecfa; background: var(--color-light-blue); border-radius: 16px; padding: 16px; }
+.mother-booking .mother-booking__date.is-selected, .mother-booking button.mother-booking__slot.is-selected { border-color: var(--color-accent); background: var(--color-light-pink); }

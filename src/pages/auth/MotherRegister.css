@@ -1,0 +1,94 @@
+@import './AuthBackground.css';
+
+.mother-register {
+  position: relative;
+  isolation: isolate;
+  min-block-size: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 88px 32px 40px;
+  overflow: hidden;
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+.mother-register__layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 500px); align-items: center; gap: clamp(40px, 6vw, 88px); inline-size: 100%; max-inline-size: 1040px; margin-inline: auto; }
+.mother-register__story { min-inline-size: 0; max-inline-size: 400px; inline-size: 100%; justify-self: center; padding: 24px 0; }
+.mother-register__brand { display: inline-flex; align-items: center; gap: 18px; text-decoration: none; color: var(--color-accent); font-size: 50px; direction: ltr; font-weight: 500; line-height: 1.1; }
+.mother-register__wordmark { position: relative; color: var(--color-primary); font-family: var(--font-english); letter-spacing: -3px; }
+.mother-register__brand [lang='ar'] { font-family: var(--font-arabic); }
+.mother-register__brand-divider { inline-size: 3px; block-size: 42px; border-radius: 4px; background: var(--color-accent); }
+.mother-register__sprout { position: absolute; inline-size: 34px; block-size: 24px; inset-inline-end: 12px; inset-block-start: -27px; }
+.mother-register__sprout::before, .mother-register__sprout::after { content: ''; position: absolute; inline-size: 18px; block-size: 22px; border-radius: 2px 90% 2px 90%; background: var(--color-light-blue); }
+.mother-register__sprout::after { inset-inline-start: 18px; transform: scaleX(-1); }
+.mother-register__brand-caption { margin-block: 16px 32px; color: var(--color-muted); font-size: 16px; }
+.mother-register__story h2 { margin-block-end: 18px; font-size: clamp(29px, 2.8vw, 38px); line-height: 1.4; letter-spacing: -0.035em; color: var(--color-text); }
+.mother-register__story h2 span { color: var(--color-accent); }
+.mother-register__right { min-inline-size: 0; }
+.mother-register__language { position: absolute; inset-block-start: 24px; right: 32px; }
+.mother-register .language-switcher { padding: 0; gap: 0; background: var(--color-light-blue); border-color: transparent; }
+.mother-register .language-switcher button { min-inline-size: 72px; min-block-size: 40px; color: var(--color-primary); }
+.mother-register .language-switcher button[aria-pressed='true'] { border-color: var(--color-border); color: var(--color-button-text); background: var(--color-light-blue); }
+.mother-register__card { padding: 28px 32px; border: 1px solid var(--color-border); border-radius: 26px; background: var(--color-white); box-shadow: var(--shadow-card); }
+.mother-register__welcome, .mother-register__form, .mother-register__footer { max-inline-size: 100%; margin-inline: auto; }
+.mother-register__welcome { text-align: center; }
+.mother-register__account-icon { display: grid; place-items: center; inline-size: 56px; block-size: 56px; margin: 0 auto 8px; border-radius: 50%; background: linear-gradient(140deg, var(--color-light-pink), var(--color-light-pink)); color: var(--color-accent); }
+.mother-register__account-icon svg { inline-size: 28px; block-size: 28px; }
+.mother-register__welcome h1 { margin-block-end: 4px; font-size: clamp(26px, 2vw, 34px); line-height: 1.35; color: var(--color-text); letter-spacing: -0.025em; }
+.mother-register__welcome p { margin-block-end: 24px; font-size: 16px; color: var(--color-muted); }
+.mother-register__form { display: grid; gap: 12px; }
+.mother-register__field { display: flex; align-items: center; gap: 12px; min-block-size: 66px; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: 14px; background: linear-gradient(120deg, var(--color-white), var(--color-white)); }
+.mother-register__field:focus-within { border-color: var(--color-primary); box-shadow: var(--shadow-focus); }
+.mother-register__field--invalid { border-color: #c43d55; }
+.mother-register__field-icon { inline-size: 26px; block-size: 28px; flex: 0 0 26px; color: var(--color-primary); }
+.mother-register__field-content { flex: 1; min-inline-size: 0; }
+.mother-register__field label { display: block; font-size: 14px; line-height: 1.5; font-weight: 500; }
+.mother-register__field input { display: block; inline-size: 100%; min-inline-size: 0; padding: 0; border: 0; border-radius: 3px; outline: none; color: var(--color-text); background: transparent; font-size: 16px; line-height: 1.6; }
+.mother-register__field input::placeholder { color: var(--color-muted); opacity: 1; }
+.mother-register__toggle { display: grid; place-items: center; flex: 0 0 44px; inline-size: 44px; block-size: 44px; padding: 10px; margin-inline-end: -8px; border: 0; border-radius: 50%; background: transparent; color: var(--color-muted); cursor: pointer; }
+.mother-register__toggle:hover { background: var(--color-light-blue); }
+.mother-register__toggle svg { inline-size: 24px; block-size: 24px; }
+.mother-register__error { margin: 5px 4px 0; font-size: 13px; line-height: 1.5; color: #b4233b; }
+.mother-register__field select { inline-size: 100%; border: 0; background: transparent; color: var(--color-text); font: inherit; }
+.mother-register__demo-note { margin: 0; color: var(--color-muted); font-size: 12px; }
+.mother-register__submit { display: flex; align-items: center; justify-content: center; gap: 24px; inline-size: 100%; min-block-size: 52px; margin-block-start: 4px; padding: 14px 24px; border: 1px solid var(--color-accent); border-radius: 13px; color: var(--color-button-text); background: linear-gradient(105deg, var(--color-light-pink), var(--color-accent)); font-size: 16px; font-weight: 600; cursor: pointer; box-shadow: var(--shadow-card); }
+.mother-register__submit:hover { background: var(--color-accent); }
+.mother-register__submit svg { inline-size: 26px; block-size: 26px; }
+.mother-register__status:empty { display: none; }
+.mother-register__status p { padding: 12px 16px; margin: 0; border-radius: 12px; background: var(--color-light-blue); font-size: 14px; }
+.mother-register__footer { margin-block-start: 24px; padding-block-start: 16px; border-block-start: 1px solid var(--color-border); text-align: center; }
+.mother-register__footer p { margin-block-end: 12px; color: var(--color-muted); font-size: 16px; }
+.mother-register__footer a { color: var(--color-primary); font-weight: 600; text-decoration: none; }
+.mother-register__footer a:hover { text-decoration: underline; }
+.mother-register__home { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-block-size: 44px; font-size: 16px; }
+.mother-register__home svg { inline-size: 24px; block-size: 24px; transform: scaleX(-1); }
+.mother-register:dir(rtl) .mother-register__home svg { transform: none; }
+.mother-register:dir(rtl) .mother-register__submit svg { transform: scaleX(-1); }
+.mother-register:lang(ar) .mother-register__story h2, .mother-register:lang(ar) .mother-register__welcome h1 { letter-spacing: 0; line-height: 1.4; }
+
+@media (max-width: 1000px) {
+  .mother-register__layout { gap: 32px; grid-template-columns: minmax(0, 1fr) minmax(0, 480px); }
+  .mother-register__brand { font-size: 44px; gap: 14px; }
+  .mother-register__brand-caption { font-size: 14px; }
+  .mother-register__story h2 { font-size: 29px; }
+  .mother-register__card { padding-inline: 24px; }
+}
+@media (max-width: 760px) {
+  .mother-register { padding: 88px 20px 32px; }
+  .mother-register__layout { grid-template-columns: minmax(0, 1fr); gap: 24px; max-inline-size: 500px; }
+  .mother-register__story { padding: 16px 0 0; text-align: center; }
+  .mother-register__brand-caption { margin-block: 12px 20px; }
+  .mother-register__story h2 { font-size: 25px; margin: 0; }
+  .mother-register__right { inline-size: 100%; }
+  .mother-register__language { inset-block-start: 16px; right: 20px; }
+}
+@media (max-width: 420px) {
+  .mother-register { padding-inline: 16px; }
+  .mother-register__card { padding: 24px 18px; border-radius: 22px; }
+  .mother-register__welcome h1 { font-size: 25px; }
+  .mother-register__welcome p { font-size: 14px; }
+  .mother-register__field { padding-inline: 10px; gap: 10px; }
+  .mother-register__field-icon { flex-basis: 22px; inline-size: 22px; }
+  .mother-register__footer p, .mother-register__home { font-size: 14px; }
+}
+
+.mother-register__wordmark { --nomu-logo-symbol-scale: .7; }

@@ -1,0 +1,30 @@
+/* Background only. Physical corners intentionally remain fixed in RTL. */
+:is(.mother-login, .mother-register, .mother-recovery, .doctor-login) {
+  isolation: isolate;
+  background: var(--color-background);
+}
+:is(.mother-login, .mother-register, .mother-recovery, .doctor-login)::before,
+:is(.mother-login, .mother-register, .mother-recovery, .doctor-login)::after {
+  content: '';
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+:is(.mother-login, .mother-register, .mother-recovery, .doctor-login)::before {
+  top: 0;
+  left: 0;
+  width: min(48vw, 640px);
+  height: clamp(180px, 38vh, 380px);
+  background: var(--color-light-blue);
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20640%20380%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H640C575%2030%20548%20110%20447%20132C341%20155%20347%20239%20232%20254C119%20269%2097%20348%200%20380Z%22%2F%3E%3C%2Fsvg%3E");
+}
+:is(.mother-login, .mother-register, .mother-recovery, .doctor-login)::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(160px, 32vh, 320px);
+  background: linear-gradient(to right, var(--color-light-pink) 45%, var(--color-light-blue) 55%);
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201440%20320%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20opacity%3D%22.35%22%20d%3D%22M0%2030C125%2010%20146%20110%20270%20122C416%20135%20428%20268%20690%20320H0Z%22%2F%3E%3Cpath%20opacity%3D%22.5%22%20d%3D%22M0%20108C119%2061%20189%20186%20306%20191C422%20196%20502%20291%20650%20320H0Z%22%2F%3E%3Cpath%20opacity%3D%22.75%22%20d%3D%22M0%20199C133%20151%20179%20248%20320%20251C407%20253%20484%20309%20550%20320H0Z%22%2F%3E%3Cpath%20opacity%3D%22.35%22%20d%3D%22M1440%205C1305%2020%201325%20111%201197%20127C1072%20143%201077%20275%20779%20320H1440Z%22%2F%3E%3Cpath%20opacity%3D%22.5%22%20d%3D%22M1440%2095C1335%2080%201280%20181%201170%20197C1049%20214%201046%20284%20838%20320H1440Z%22%2F%3E%3Cpath%20opacity%3D%22.75%22%20d%3D%22M1440%20186C1318%20151%201294%20255%201156%20260C1063%20263%201036%20305%20938%20320H1440Z%22%2F%3E%3C%2Fsvg%3E");
+}

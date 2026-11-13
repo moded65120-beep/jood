@@ -1,0 +1,38 @@
+.mother-portal .parent-home { display: grid; gap: 32px; padding-block: 16px; }
+.parent-home .parent-home__title { margin: 0; color: #091b42; font-size: clamp(26px, 2.6vw, 36px); font-weight: 700; }
+.parent-home .parent-home__welcome { padding: clamp(24px, 3vw, 40px); border-radius: 26px; background: linear-gradient(115deg, #fce6f3, #fbdced); }
+.parent-home .parent-home__welcome h2 { margin: 0 0 12px; font-size: clamp(24px, 2.6vw, 36px); line-height: 1.4; }
+.parent-home .parent-home__welcome bdi { color: #ba2b72; }
+.parent-home .parent-home__welcome p { margin: 0; font-size: 18px; line-height: 1.6; }
+.parent-home .parent-home__section-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-block-end: 24px; }
+.parent-home .parent-home__section-heading h2 { margin: 0; font-size: clamp(23px, 2.2vw, 29px); }
+.parent-home .parent-home__count { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border: 1px solid #dcdffb; background: #f1f1ff; border-radius: 999px; white-space: nowrap; font-size: 14px; }
+.parent-home .parent-home__information { min-inline-size: 0; padding: 24px 28px; background: white; border: 1px solid #e2ebfb; border-radius: 26px; box-shadow: 0 8px 24px #4674ba0a; }
+.parent-home .parent-home__information h3 { margin: 0 0 18px; font-size: 23px; }
+.parent-home .parent-home__table { inline-size: 100%; border-collapse: collapse; table-layout: fixed; text-align: start; }
+.parent-home .parent-home__table th { padding: 14px 16px; background: #eff6ff; font-size: 14px; font-weight: 600; text-align: start; }
+.parent-home .parent-home__table th span { display: flex; align-items: center; gap: 10px; }
+.mother-portal .parent-home .parent-home__table th svg,
+.mother-portal .parent-home .parent-home__count svg { inline-size: 20px; block-size: 20px; }
+.parent-home .parent-home__table th:first-child { border-start-start-radius: 12px; border-end-start-radius: 12px; }
+.parent-home .parent-home__table th:last-child { border-start-end-radius: 12px; border-end-end-radius: 12px; }
+.parent-home .parent-home__table td { padding: 16px; border-block-end: 1px solid #eef2fa; overflow-wrap: anywhere; font-size: 15px; }
+.parent-home .parent-home__table td a { color: inherit; font-weight: 650; text-decoration: none; }
+.parent-home .parent-home__table td a:hover { text-decoration: underline; }
+.parent-home .parent-home__table td a:focus-visible { outline: 2px solid #548ede; outline-offset: 4px; border-radius: 3px; }
+.parent-home .parent-home__gender { display: inline-block; padding: 5px 18px; border-radius: 999px; font-size: 14px; }
+.parent-home .parent-home__gender--male { background: #e0efff; color: #15569d; }
+.parent-home .parent-home__gender--female { background: #fce5f1; color: #a62165; }
+.parent-home .parent-home__table td[colspan] .portal-empty { margin: 0; padding: 24px 12px; color: #536080; text-align: center; }
+@media (max-width: 700px) {
+  .mother-portal .parent-home { gap: 24px; }
+  .parent-home .parent-home__information { padding: 20px 16px; }
+  .parent-home .parent-home__table thead { position: absolute; inline-size: 1px; block-size: 1px; overflow: hidden; clip-path: inset(50%); }
+  .parent-home .parent-home__table, .parent-home .parent-home__table tbody, .parent-home .parent-home__table tr, .parent-home .parent-home__table td { display: block; inline-size: 100%; }
+  .parent-home .parent-home__table tr { padding-block: 12px; border-block-end: 1px solid #e2ebfb; }
+  .parent-home .parent-home__table td { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); align-items: center; gap: 12px; padding: 9px 0; border: 0; }
+  .parent-home .parent-home__table td::before { content: attr(data-label); font-size: 13px; color: #536080; }
+  .parent-home .parent-home__table td[colspan] { display: block; }
+  .parent-home .parent-home__table td[colspan]::before { display: none; }
+  .parent-home .parent-home__section-heading { flex-wrap: wrap; }
+}

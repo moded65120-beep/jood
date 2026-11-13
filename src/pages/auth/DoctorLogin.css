@@ -1,0 +1,88 @@
+@import './AuthBackground.css';
+
+.doctor-login {
+  position: relative;
+  isolation: isolate;
+  min-block-size: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 88px 32px 40px;
+  overflow: hidden;
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+.doctor-login__layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 500px); align-items: center; gap: clamp(40px, 6vw, 88px); inline-size: 100%; max-inline-size: 1040px; margin-inline: auto; }
+.doctor-login__story { min-inline-size: 0; max-inline-size: 400px; inline-size: 100%; justify-self: center; padding: 24px 0; }
+.doctor-login__brand { display: inline-flex; align-items: center; gap: 18px; text-decoration: none; color: var(--color-accent); font-size: 50px; direction: ltr; font-weight: 500; line-height: 1.1; }
+.doctor-login__wordmark { position: relative; color: var(--color-primary); font-family: var(--font-english); letter-spacing: -3px; }
+.doctor-login__brand [lang='ar'] { font-family: var(--font-arabic); }
+.doctor-login__brand-divider { inline-size: 3px; block-size: 42px; border-radius: 4px; background: var(--color-accent); }
+.doctor-login__brand-caption { margin-block: 16px 32px; color: var(--color-muted); font-size: 16px; }
+.doctor-login__story h2 { margin-block-end: 18px; font-size: clamp(29px, 2.8vw, 38px); line-height: 1.4; letter-spacing: -0.035em; color: var(--color-text); }
+.doctor-login__story h2 span { color: var(--color-primary); }
+.doctor-login__right { min-inline-size: 0; }
+.doctor-login__language { position: absolute; inset-block-start: 24px; right: 32px; }
+.doctor-login .language-switcher { padding: 0; gap: 0; background: var(--color-white); border-color: var(--color-border); }
+.doctor-login .language-switcher button { min-inline-size: 72px; min-block-size: 40px; color: var(--color-primary); }
+.doctor-login .language-switcher button[aria-pressed='true'] { border-color: var(--color-border); color: var(--color-button-text); background: var(--color-light-blue); }
+.doctor-login__card { padding: 28px 32px; border: 1px solid var(--color-border); border-radius: 26px; background: var(--color-white); box-shadow: var(--shadow-card); }
+.doctor-login__welcome, .doctor-login__form, .doctor-login__footer { max-inline-size: 100%; margin-inline: auto; }
+.doctor-login__welcome { text-align: center; }
+.doctor-login__account-icon { display: grid; place-items: center; inline-size: 56px; block-size: 56px; margin: 0 auto 8px; border-radius: 50%; background: var(--color-light-blue); color: var(--color-primary); }
+.doctor-login__account-icon svg { inline-size: 28px; block-size: 28px; }
+.doctor-login__welcome h1 { margin-block-end: 4px; font-size: clamp(26px, 2vw, 34px); line-height: 1.35; color: var(--color-text); letter-spacing: -0.025em; }
+.doctor-login__welcome p { margin-block-end: 24px; font-size: 16px; color: var(--color-muted); }
+.doctor-login__form { display: grid; gap: 12px; }
+.doctor-login__field { display: flex; align-items: center; gap: 12px; min-block-size: 66px; padding: 10px 14px; border: 1px solid var(--color-border); border-radius: 14px; background: linear-gradient(120deg, var(--color-white), var(--color-white)); }
+.doctor-login__field:focus-within { border-color: var(--color-primary); box-shadow: var(--shadow-focus); }
+.doctor-login__field--invalid { border-color: var(--color-accent); }
+.doctor-login__field-icon { inline-size: 26px; block-size: 28px; flex: 0 0 26px; color: var(--color-primary); }
+.doctor-login__field-content { flex: 1; min-inline-size: 0; }
+.doctor-login__field label { display: block; font-size: 14px; line-height: 1.5; font-weight: 500; }
+.doctor-login__field input { display: block; inline-size: 100%; min-inline-size: 0; padding: 0; border: 0; border-radius: 3px; outline: none; color: var(--color-text); background: transparent; font-size: 16px; line-height: 1.6; }
+.doctor-login__field input::placeholder { color: var(--color-muted); opacity: 1; }
+.doctor-login__toggle { display: grid; place-items: center; flex: 0 0 44px; inline-size: 44px; block-size: 44px; padding: 10px; margin-inline-end: -8px; border: 0; border-radius: 50%; background: transparent; color: var(--color-muted); cursor: pointer; }
+.doctor-login__toggle:hover { background: var(--color-light-blue); }
+.doctor-login__toggle svg { inline-size: 24px; block-size: 24px; }
+.doctor-login__error { margin: 5px 4px 0; font-size: 13px; line-height: 1.5; color: var(--color-text); }
+.doctor-login__submit { display: flex; align-items: center; justify-content: center; gap: 24px; inline-size: 100%; min-block-size: 52px; margin-block-start: 4px; padding: 14px 24px; border: 1px solid var(--color-primary); border-radius: 13px; color: var(--color-white); background: linear-gradient(110deg, var(--color-light-blue) -180%, var(--color-primary) 75%); font-size: 16px; font-weight: 600; cursor: pointer; box-shadow: var(--shadow-card); transition: box-shadow var(--transition-fast), background-position var(--transition-fast); background-size: 130% 100%; }
+.doctor-login__submit:hover { background-position: 100% 0; }
+.doctor-login__submit svg { inline-size: 26px; block-size: 26px; }
+.doctor-login__status:empty { display: none; }
+.doctor-login__status p { padding: 12px 16px; margin: 0; border-radius: 12px; background: var(--color-light-blue); font-size: 14px; }
+.doctor-login__footer { margin-block-start: 24px; padding-block-start: 16px; border-block-start: 1px solid var(--color-border); text-align: center; }
+.doctor-login__footer a { color: var(--color-primary); font-weight: 600; text-decoration: none; }
+.doctor-login__footer a:hover { text-decoration: underline; }
+.doctor-login__footer a { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-block-size: 44px; font-size: 16px; }
+.doctor-login__footer a svg { inline-size: 24px; block-size: 24px; transform: scaleX(-1); }
+.doctor-login:dir(rtl) .doctor-login__footer a svg { transform: none; }
+.doctor-login:dir(rtl) .doctor-login__submit svg { transform: scaleX(-1); }
+.doctor-login:lang(ar) .doctor-login__story h2, .doctor-login:lang(ar) .doctor-login__welcome h1 { letter-spacing: 0; line-height: 1.4; }
+
+@media (max-width: 1000px) {
+  .doctor-login__layout { gap: 32px; grid-template-columns: minmax(0, 1fr) minmax(0, 480px); }
+  .doctor-login__brand { font-size: 44px; gap: 14px; }
+  .doctor-login__brand-caption { font-size: 14px; }
+  .doctor-login__story h2 { font-size: 29px; }
+  .doctor-login__card { padding-inline: 24px; }
+}
+@media (max-width: 760px) {
+  .doctor-login { padding: 88px 20px 32px; }
+  .doctor-login__layout { grid-template-columns: minmax(0, 1fr); gap: 24px; max-inline-size: 500px; }
+  .doctor-login__story { padding: 16px 0 0; text-align: center; }
+  .doctor-login__brand-caption { margin-block: 12px 20px; }
+  .doctor-login__story h2 { font-size: 25px; margin: 0; }
+  .doctor-login__right { inline-size: 100%; }
+  .doctor-login__language { inset-block-start: 16px; right: 20px; }
+}
+@media (max-width: 420px) {
+  .doctor-login { padding-inline: 16px; }
+  .doctor-login__card { padding: 24px 18px; border-radius: 22px; }
+  .doctor-login__welcome h1 { font-size: 25px; }
+  .doctor-login__welcome p { font-size: 14px; }
+  .doctor-login__field { padding-inline: 10px; gap: 10px; }
+  .doctor-login__field-icon { flex-basis: 22px; inline-size: 22px; }
+  .doctor-login__footer a { font-size: 14px; }
+}
+
+.doctor-login__wordmark { --nomu-logo-symbol-scale: .7; }

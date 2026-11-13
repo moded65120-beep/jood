@@ -1,0 +1,35 @@
+/* Reuse the Inter/Cairo resources already imported by index.html. */
+.doctor-dashboard[lang] {
+  --dd-font-family: 'Inter', 'Cairo', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+.doctor-dashboard[lang="ar"] {
+  --dd-font-family: 'Cairo', 'Inter', system-ui, sans-serif;
+}
+
+/* Auto-direction clinical content keeps the matching script font in either UI. */
+.doctor-dashboard[lang] :where(bdi, [dir="auto"]):dir(ltr) {
+  --dd-font-family: 'Inter', 'Cairo', system-ui, sans-serif;
+}
+.doctor-dashboard[lang] :where(bdi, [dir="auto"]):dir(rtl) {
+  --dd-font-family: 'Cairo', 'Inter', system-ui, sans-serif;
+}
+
+/* Dialogs stay descendants of the dashboard even when displayed in the top layer.
+   Explicitly cover descendants to override global :lang(ar) and local font shorthands,
+   including chart labels, native form controls and mixed-language clinical content. */
+.doctor-dashboard[lang],
+.doctor-dashboard[lang] :where(*) {
+  font-family: var(--dd-font-family);
+}
+
+/* Only family and weight are standardized. Existing sizes, line heights, spacing,
+   card dimensions and responsive breakpoints remain owned by each component. */
+.doctor-dashboard[lang] :where(h1, h2) {
+  font-weight: 700;
+}
+
+.doctor-dashboard[lang] :where(h3, h4, h5, h6, label, dt, legend, th, button) {
+  font-weight: 600;
+}

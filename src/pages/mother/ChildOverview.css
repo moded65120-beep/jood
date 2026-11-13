@@ -1,0 +1,120 @@
+﻿.child-page { --child-blue: #eef7ff; --child-pink: #fff1f7; --child-line: #e3eefb; --child-muted: #647494; color: #102b50; }
+.child-breadcrumb { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; padding: 4px 4px 22px; color: var(--child-muted); font-size: 15px; }
+.child-breadcrumb a { color: inherit; text-decoration: none; }
+.child-breadcrumb a:hover { text-decoration: underline; }
+.child-page-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; }
+.child-medical-nav { display: flex; flex-direction: column; gap: 8px; padding: 12px; min-height: 660px; border: 1px solid var(--child-line); border-radius: 18px; background: #ffffff85; }
+.child-medical-nav a { display: flex; align-items: center; gap: 18px; min-height: 68px; padding: 12px 15px; border-radius: 16px; text-decoration: none; color: #233e65; font-size: 17px; }
+.child-medical-nav a.active { background: #fce0ef; color: #c72879; font-weight: 600; }
+.child-medical-nav a:hover { background: #edf6ff; }
+.child-page svg:not(:where(.child-health-section *)) { width: 28px; height: 28px; flex-shrink: 0; }
+.child-content { min-width: 0; border: 1px solid var(--child-line); border-radius: 18px; background: white; overflow: hidden; box-shadow: 0 4px 18px #1e335504; }
+.child-content--health { overflow: visible; }
+.child-content--health > .child-profile { border-start-start-radius: inherit; border-start-end-radius: inherit; }
+.child-health-section { min-width: 0; }
+.child-profile { display: flex; align-items: center; gap: 40px; padding: 20px 24px; min-height: 200px; background: linear-gradient(110deg, #f1f8ff, white); border-bottom: 1px solid var(--child-line); }
+.child-theme-pink .child-profile { background: linear-gradient(110deg, #fff1f7, white); }
+.child-profile-avatar { display: block; position: relative; width: 160px; height: 160px; flex-shrink: 0; overflow: hidden; border-radius: 50%; background: #d7edff; }
+.child-theme-pink .child-profile-avatar { background: #ffdeec; }
+.child-profile-avatar img { position: absolute; max-inline-size: none; width: 110%; height: 110%; left: -6%; top: -4%; object-fit: cover; }
+.child-profile h1 { margin: 0 0 10px; font-size: 36px; }
+.child-profile p { margin: 0; color: var(--child-muted); font-size: 21px; }
+.child-overview-details { padding: 16px 20px 24px; }
+.child-overview-details > dl { margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.child-detail { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 124px; border: 1px solid #e6f2ff; border-radius: 16px; padding: 16px; background: var(--child-blue); }
+.child-detail-pink { background: var(--child-pink); border-color: #fce7f1; }
+.child-detail-icon { display: grid; place-items: center; width: 50px; height: 50px; border-radius: 50%; background: #dcefff; color: #0085e5; flex-shrink: 0; }
+.child-detail-pink .child-detail-icon { background: #ffe0ef; color: #d32b7e; }
+.child-detail > div { min-width: 0; text-align: end; }
+.child-detail dt { margin-bottom: 10px; font-size: 16px; color: var(--child-muted); }
+.child-detail dd { margin: 0; font-size: 21px; font-weight: 600; overflow-wrap: anywhere; }
+.child-section { padding: 24px; }
+.child-section h2 { font-size: 25px; margin-bottom: 12px; }
+.child-section-note { color: var(--child-muted); margin-bottom: 20px; }
+.child-readonly-entry { padding: 18px; background: #f5faff; border: 1px solid var(--child-line); border-radius: 14px; margin-top: 12px; }
+.child-readonly-entry > p { margin: 0 0 8px; }
+.child-readonly-entry > p:last-child { margin-bottom: 0; }
+.child-record-fields { margin: 16px 0 0; display: grid; gap: 16px; }
+.child-record-fields dt { font-weight: 600; margin-bottom: 6px; }
+.child-record-fields dd { margin: 0; color: #50617e; }
+.child-visit-group + .child-visit-group { margin-top: 24px; }
+.child-visit-group h3 { font-size: 20px; }
+.child-placeholder { padding: 24px; border-radius: 14px; background: #fff1f7; color: #63728a; }
+.child-not-found { padding: 24px; }
+@media (max-width: 1250px) {
+ .child-page-layout { grid-template-columns: minmax(0, 1fr); }
+ .child-medical-nav a { font-size: 15px; gap: 12px; padding-inline: 10px; }
+ .child-overview-details > dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .child-profile { gap: 24px; }
+ .child-profile-avatar { width: 120px; height: 120px; }
+ .child-profile h1 { font-size: 28px; }
+}
+@media (max-width: 800px) {
+ .child-page-layout { grid-template-columns: minmax(0, 1fr); }
+ .child-medical-nav { min-height: auto; }
+ .child-medical-nav a { min-height: 44px; }
+ .child-profile { padding: 18px; gap: 18px; min-height: 150px; }
+ .child-profile-avatar { width: 90px; height: 90px; }
+ .child-profile h1 { font-size: 25px; }
+ .child-profile p { font-size: 16px; }
+ .child-overview-details { padding: 14px; }
+ .child-detail { padding: 12px; flex-direction: column; align-items: start; }
+ .child-detail > div { text-align: start; }
+ .child-detail dd { font-size: 19px; }
+ .child-section { padding: 18px; }
+}
+
+/* Shared child frame and overview presentation only. */
+.child-page { --child-muted: #50637f; --child-line: #dce6f2; padding: 10px; }
+.child-breadcrumb { font-size: 13px; gap: 12px; padding-block-end: 24px; }
+.child-page-layout { gap: 24px; grid-template-columns: minmax(0, 1fr); }
+.child-medical-nav { min-height: auto; gap: 5px; padding: 10px; border-radius: 20px; background: white; box-shadow: 0 4px 20px #20375404; }
+.child-medical-nav a { min-height: 54px; padding: 12px; gap: 12px; font-size: 14px; border-radius: 12px; }
+.child-medical-nav a svg { width: 20px; height: 20px; color: #436a91; }
+.child-medical-nav a.active { background: #cde4ff; color: #235c92; }
+.child-theme-pink .child-medical-nav a.active { background: #f7cddd; color: #a33b70; }
+.child-medical-nav a.active svg { color: inherit; }
+.child-content { border-radius: 22px; box-shadow: 0 8px 28px #20375405; }
+.child-profile { min-height: 156px; padding: 30px; gap: 20px; background: #e7f2ff; }
+.child-theme-pink .child-profile { background: #fdeaf2; }
+.child-profile-avatar { display: grid; place-items: center; width: 76px; height: 76px; border: 5px solid white; color: #235c92; font-size: 24px; font-weight: 600; }
+.child-theme-pink .child-profile-avatar { color: #a33b70; }
+.child-profile h1 { font-size: clamp(24px, 2.5vw, 32px); letter-spacing: -.025em; margin-bottom: 8px; }
+.child-profile p { font-size: 14px; }
+.child-overview-details { padding: 26px; }
+.child-overview-details > dl { gap: 16px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.child-detail { min-height: 172px; flex-direction: column; align-items: start; justify-content: start; gap: 18px; padding: 20px; border-radius: 17px; background: #e7f2ff; border-color: #c8dff5; }
+.child-detail-pink { background: #fdeaf2; border-color: #f0cddd; }
+.child-detail-peach { background: #ffecdd; border-color: #f4d4ba; }
+.child-detail-icon { width: 38px; height: 38px; border-radius: 12px; color: #2369a5; background: #c6e1ff; }
+.child-detail-icon svg { width: 21px; height: 21px; }
+.child-detail-pink .child-detail-icon { color: #a33b70; background: #f7cddd; }
+.child-detail-peach .child-detail-icon { color: #a65e2e; background: #ffdec4; }
+.child-detail > div { text-align: start; }
+.child-detail dt { font-size: 12px; margin-bottom: 7px; }
+.child-detail dd { font-size: 19px; line-height: 1.45; }
+@media (max-width: 1250px) {
+ .child-page-layout { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+ .child-overview-details > dl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 800px) {
+ .child-page { padding: 0; }
+ .child-page-layout { grid-template-columns: minmax(0, 1fr); }
+ .child-medical-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+ .child-medical-nav a { min-width: 0; font-size: 13px; gap: 8px; padding: 10px; }
+ .child-profile { padding: 24px 20px; }
+ .child-overview-details { padding: 16px; }
+ .child-detail { padding: 16px; min-height: 158px; }
+}
+@media (max-width: 380px) {
+ .child-overview-details > dl { grid-template-columns: minmax(0, 1fr); }
+ .child-profile { gap: 12px; padding: 20px 16px; }
+ .child-profile-avatar { width: 60px; height: 60px; font-size: 20px; }
+}
+
+/* Initials and overview values use the same richer accents as the dashboard. */
+.child-profile-avatar { background: #c6e1ff; }
+.child-theme-pink .child-profile-avatar { background: #f7cddd; }
+.child-page { color: #10254c; }
+.child-detail dt { color: #50637f; }
+.child-detail dd { color: #10254c; }

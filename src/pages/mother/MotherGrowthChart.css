@@ -1,0 +1,27 @@
+.mother-growth { max-inline-size: var(--content-width); margin-inline: auto; padding: var(--space-4) var(--space-3); display: grid; gap: var(--space-3); }
+.mother-growth > * { min-inline-size: 0; }
+.mother-growth__chart-layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 3fr); align-items: start; gap: var(--space-3); }
+.mother-growth__chart-layout > * { min-inline-size: 0; }
+.mother-growth__header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-2); }
+.mother-growth__header h1 { margin: 0; }
+.mother-growth__child { background: linear-gradient(115deg, var(--color-white), var(--color-light-blue)); }
+.mother-growth__details { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-3); margin-block: var(--space-2) 0; }
+.mother-growth__details dt, .mother-growth__measurement dt { color: var(--color-muted); }
+.mother-growth__details dd { margin: var(--space-1) 0 0; font-weight: var(--font-weight-subheading); }
+.mother-growth__details--date { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.mother-growth__measurements { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); margin-block: var(--space-3) 0; }
+.mother-growth__measurement { padding: var(--space-3); background: var(--color-light-blue); border: 1px solid var(--color-border); border-radius: var(--radius-card); }
+.mother-growth__measurement:nth-child(2) { background: var(--color-light-pink); }
+.mother-growth__measurement dd { margin: var(--space-1) 0 0; font-size: var(--font-size-xl); font-weight: var(--font-weight-subheading); }
+.mother-growth__measurement dd span { font-size: var(--font-size-sm); font-weight: var(--font-weight-body); }
+.mother-growth-preview__notice { max-inline-size: var(--content-width); margin: var(--space-3) auto 0; padding: var(--space-2) var(--space-3); background: var(--color-light-pink); border-radius: var(--radius-control); }
+@media (max-width: 75rem) {
+  .mother-growth__chart-layout { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
+}
+@media (max-width: 64rem) {
+  .mother-growth__chart-layout { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 48rem) {
+  .mother-growth { padding: var(--space-2); }
+  .mother-growth__details, .mother-growth__measurements { grid-template-columns: 1fr; gap: var(--space-2); }
+}

@@ -1,0 +1,50 @@
+.nomu-public-page { height:100dvh; overflow-y:auto; overscroll-behavior-y:contain; background:#F8FBFF; color:#183B68; font-family:var(--font-body); animation:nomu-public-enter 220ms ease both; }
+.nomu-public-header { display:flex; justify-content:space-between; align-items:center; gap:20px; padding:18px clamp(24px,5vw,80px); }
+.nomu-public-header img { display:block; inline-size:clamp(130px,18vw,180px); block-size:auto; }
+.nomu-public-content { max-inline-size:1000px; margin-inline:auto; padding:12px 28px 32px; }
+.nomu-public-content h1 { font-size:clamp(26px,3vw,36px); line-height:1.35; margin-block:14px 12px; letter-spacing:-.025em; }
+.nomu-public-content h2 { font-size:21px; line-height:1.4; margin-block:0 10px; }
+.nomu-public-page[lang=ar] :is(h1,h2,h3) { letter-spacing:normal; }
+.nomu-public-intro { color:#536b87; font-size:16px; line-height:1.85; max-inline-size:52ch; margin-block:0; }
+.nomu-public-back { display:inline-flex; align-items:center; gap:8px; color:inherit; text-decoration:none; padding:8px 0; }
+.nomu-public-back svg { inline-size:20px; }
+.nomu-public-page[dir=rtl] .nomu-public-back svg { transform:rotate(180deg); }
+.nomu-public-roles,.nomu-public-features { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; margin-block:24px; }
+.nomu-public-roles > a,.nomu-public-features > article,.nomu-public-mission { min-inline-size:0; border:1px solid #dce7f5; border-radius:20px; padding:24px; background:#fff; box-shadow:0 5px 20px #183b6809; }
+.nomu-public-roles > a { color:inherit; text-decoration:none; text-align:center; transition:box-shadow 160ms,border-color 160ms,transform 160ms; }
+.nomu-public-roles > a:first-child { background:linear-gradient(135deg,#fff,#D7E9FF); }
+.nomu-public-roles > a:last-child { background:linear-gradient(135deg,#fff,#F9D8E8); }
+.nomu-public-roles > a:hover { box-shadow:0 8px 24px #183b6814; border-color:#91b6df; transform:translateY(-3px); }
+.nomu-public-features svg { inline-size:28px; block-size:28px; margin-block-end:16px; color:#447da8; }
+.nomu-public-roles p,.nomu-public-features p,.nomu-public-mission p { color:#536b87; font-size:14px; line-height:1.8; margin:0; }
+.nomu-public-mission { display:flex; align-items:flex-start; gap:18px; margin-block:22px 28px; background:linear-gradient(120deg,#fff,#fceaf3); }
+.nomu-public-features { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.nomu-public-features h3 { font-size:17px; line-height:1.5; margin-block:0 8px; }
+.nomu-public-features > article { padding:22px; transition:transform 160ms ease,box-shadow 160ms ease; }
+.nomu-public-features > article:nth-child(2) { background:#fff7fb; }
+.nomu-public-features > article:hover { transform:translateY(-2px); box-shadow:0 8px 24px #183b6812; }
+.nomu-public-down { display:flex; flex-direction:column; align-items:center; gap:6px; margin:22px auto 0; padding:8px 14px; border:0; border-radius:16px; background:transparent; color:#536b87; font:inherit; font-size:12px; cursor:pointer; }
+.nomu-public-down svg { inline-size:30px; block-size:30px; padding:5px; background:#fceaf3; border:1px solid #f2d6e6; border-radius:50%; color:#af5980; }
+.nomu-public-down:hover { background:#edf4fc; }
+.nomu-public-about-hero { display:grid; grid-template-columns:1.1fr 1fr; align-items:center; gap:24px; margin-block:16px 20px; }
+.nomu-public-about-hero figure { margin:0; padding:24px 12px; border-radius:48% 52% 45% 55%; background:linear-gradient(140deg,#e3efff,#fce5f1); }
+.nomu-public-about-hero img { display:block; inline-size:100%; block-size:auto; object-fit:contain; }
+.nomu-public-eyebrow { margin:0; font-size:12px; font-weight:650; color:#8b5474; }
+.nomu-public-mission-icon { display:grid; place-items:center; flex-shrink:0; inline-size:42px; block-size:42px; border-radius:14px; background:#F9D8E8; color:#a6537b; }
+.nomu-public-mission-icon svg { inline-size:24px; block-size:24px; }
+.nomu-public-selection .nomu-public-content { max-inline-size:760px; }
+.nomu-public-selection-heading { text-align:center; margin-block:24px; }
+.nomu-public-selection-heading .nomu-public-intro { margin-inline:auto; max-inline-size:45ch; font-size:15px; }
+.nomu-public-roles { max-inline-size:640px; margin:24px auto; }
+.nomu-public-role-icon { display:grid; place-items:center; inline-size:68px; block-size:68px; margin:0 auto 18px; border-radius:22px; background:#ffffffc9; box-shadow:0 4px 16px #183b6808; }
+.nomu-public-role-icon svg { inline-size:38px; block-size:38px; stroke-width:1.6; }
+.nomu-public-page--leaving { animation:nomu-public-exit 180ms ease both; pointer-events:none; }
+.nomu-home.public-home--leaving { animation:nomu-home-exit 180ms ease both; pointer-events:none; }
+.nemo-copy .nomu-public-start { display:inline-flex; align-items:center; gap:14px; margin-block-start:24px; padding:13px 28px; border:1px solid #ecc9dc; border-radius:999px; color:#183B68; background:linear-gradient(110deg,#F9D8E8,#D7E9FF); box-shadow:0 4px 16px #183b6810; font:inherit; font-weight:650; cursor:pointer; }
+.nomu-public-start:hover { box-shadow:0 6px 20px #183b6820; }
+.nomu-home[dir=rtl] .nomu-public-start svg { transform:rotate(180deg); }
+@keyframes nomu-public-enter { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:none; } }
+@keyframes nomu-public-exit { to { opacity:0; transform:translateY(12px); } }
+@keyframes nomu-home-exit { to { opacity:0; transform:translateY(-12px); } }
+@media(max-width:700px) { .nomu-public-header { padding:16px 20px; flex-wrap:wrap; } .nomu-public-content { padding-inline:20px; } .nomu-public-about-hero { grid-template-columns:minmax(0,1fr); gap:18px; } .nomu-public-about-hero figure { max-inline-size:380px; justify-self:center; } .nomu-public-roles,.nomu-public-features { grid-template-columns:minmax(0,1fr); } .nomu-public-roles { max-inline-size:400px; } .nomu-public-roles > a,.nomu-public-features > article,.nomu-public-mission { padding:22px; } .nemo-copy .nomu-public-start { margin-block-start:14px; padding:10px 24px; } }
+@media(prefers-reduced-motion:reduce) { .nomu-public-page,.nomu-public-page--leaving,.nomu-home.public-home--leaving { animation:none; } .nomu-public-roles > a,.nomu-public-features > article { transition:none; } .nomu-public-roles > a:hover,.nomu-public-features > article:hover { transform:none; } }

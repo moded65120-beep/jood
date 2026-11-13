@@ -1,0 +1,80 @@
+@import './AuthBackground.css';
+
+.mother-login__brand { position: relative; display: inline-flex; align-items: center; gap: 20px; text-decoration: none; font-size: clamp(48px, 4.6vw, 72px); font-weight: 600; line-height: 1.05; letter-spacing: -3px; color: #f8669d; }
+.mother-login__wordmark { position: relative; color: #389bfa; font-family: var(--font-english); font-weight: 600; letter-spacing: -4px; }
+.mother-login__brand [lang='ar'] { font-family: var(--font-arabic); }
+.mother-login__brand-divider { inline-size: 6px; block-size: 58px; border-radius: 8px; background: #fb689c; }
+.mother-login__sprout { position: absolute; inline-size: 34px; block-size: 26px; inset-inline-end: 0; inset-block-start: -27px; }
+.mother-login__sprout::before, .mother-login__sprout::after { content: ''; position: absolute; inline-size: 17px; block-size: 25px; background: linear-gradient(130deg, #70c2de, #a4dce8); border-radius: 3px 90% 3px 90%; transform: rotate(-18deg); }
+.mother-login__sprout::after { inset-inline-start: 17px; transform: scaleX(-1) rotate(-18deg); }
+/* Palette overrides apply only to Mother Login; shared recovery branding is preserved. */
+.mother-login .mother-login__brand { position: relative; display: inline-flex; align-items: center; gap: 20px; text-decoration: none; font-size: clamp(48px, 4.6vw, 72px); font-weight: 600; line-height: 1.05; letter-spacing: -3px; color: var(--color-accent); }
+.mother-login .mother-login__wordmark { position: relative; color: var(--color-primary); font-family: var(--font-english); font-weight: 600; letter-spacing: -4px; }
+.mother-login .mother-login__brand [lang='ar'] { font-family: var(--font-arabic); }
+.mother-login .mother-login__brand-divider { inline-size: 6px; block-size: 58px; border-radius: 8px; background: var(--color-accent); }
+.mother-login .mother-login__sprout { position: absolute; inline-size: 34px; block-size: 26px; inset-inline-end: 0; inset-block-start: -27px; }
+.mother-login .mother-login__sprout::before, .mother-login .mother-login__sprout::after { content: ''; position: absolute; inline-size: 17px; block-size: 25px; background: linear-gradient(130deg, var(--color-primary), var(--color-light-blue)); border-radius: 3px 90% 3px 90%; transform: rotate(-18deg); }
+.mother-login .mother-login__sprout::after { inset-inline-start: 17px; transform: scaleX(-1) rotate(-18deg); }
+.mother-login { position: relative; isolation: isolate; display: grid; place-items: center; min-block-size: 100svh; padding: 100px 24px 48px; overflow: clip; color: var(--color-text); font-family: var(--font-english); }
+.mother-login:lang(ar) { font-family: var(--font-arabic); }
+.mother-login__shell { width: 100%; max-width: 500px; position: relative; }
+.mother-login__language { position: fixed; top: 24px; right: 32px; z-index: 5; }
+.mother-login .language-switcher { background: var(--color-white); box-shadow: var(--shadow-card); }
+.mother-login .language-switcher button { min-block-size: 38px; }
+.mother-login > .mother-login__shell > .mother-login__brand { display: flex; width: fit-content; margin: 0 auto 32px; font-size: 46px; gap: 14px; padding-top: 18px; direction: ltr; }
+.mother-login .mother-login__brand-divider { width: 3px; height: 38px; }
+.mother-login .mother-login__sprout { transform: scale(.65); transform-origin: bottom right; }
+.mother-login__layout { position: relative; isolation: isolate; }
+.mother-login__card { position: relative; z-index: 2; padding: 32px 38px; background: var(--color-white); border: 1px solid var(--color-border); border-radius: 26px; box-shadow: var(--shadow-card); }
+.mother-login__welcome { text-align: center; }
+.mother-login__welcome-icon { display: grid; place-items: center; width: 58px; height: 58px; margin: 0 auto 16px; border-radius: 50%; color: var(--color-accent); background: var(--color-light-pink); }
+.mother-login__welcome-icon svg { width: 28px; height: 28px; }
+.mother-login__welcome h1 { margin: 0 0 10px; font-size: 28px; line-height: 1.35; letter-spacing: -.035em; }
+.mother-login:lang(ar) .mother-login__welcome h1 { letter-spacing: 0; }
+.mother-login__welcome p { margin: 0 auto 28px; max-width: 340px; color: var(--color-muted); font-size: 15px; line-height: 1.65; text-wrap: balance; }
+.mother-login__form { display: grid; gap: 16px; }
+.mother-login__field { display: flex; align-items: center; gap: 12px; min-height: 72px; padding: 11px 15px; border: 1px solid var(--color-border); border-radius: 13px; background: var(--color-white); }
+.mother-login__field:focus-within { border-color: var(--color-primary); box-shadow: var(--shadow-focus); }
+.mother-login__field--invalid { border-color: var(--color-accent); }
+.mother-login__field-icon { flex: 0 0 22px; width: 22px; height: 24px; color: var(--color-primary); }
+.mother-login__field-content { flex: 1; min-width: 0; }
+.mother-login__field label { display: block; margin-bottom: 3px; font-size: 13px; font-weight: 600; }
+.mother-login__field input { display: block; width: 100%; min-width: 0; padding: 0; border: 0; background: transparent; color: var(--color-text); font-size: 16px; line-height: 1.5; outline: none; }
+.mother-login__field input::placeholder { color: var(--color-muted); opacity: 1; }
+.mother-login__toggle { display: grid; place-items: center; flex: 0 0 44px; width: 44px; height: 44px; margin-inline-end: -8px; padding: 11px; border: 0; border-radius: 50%; background: transparent; color: var(--color-muted); cursor: pointer; }
+.mother-login__toggle:hover { background: var(--color-light-blue); }
+.mother-login__options { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0 12px; }
+.mother-login__remember { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; cursor: pointer; }
+.mother-login__remember input { width: 17px; height: 17px; margin: 0; accent-color: var(--color-accent); }
+.mother-login__forgot { min-height: 44px; color: var(--color-primary); font-size: 14px; }
+.mother-login__submit { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 52px; padding: 12px 20px; border: 0; border-radius: 13px; background: linear-gradient(110deg, var(--color-light-pink), var(--color-accent)); color: var(--color-button-text); font-size: 16px; font-weight: 700; box-shadow: var(--shadow-card); cursor: pointer; }
+.mother-login__submit:hover { background: var(--color-accent); }
+.mother-login__submit svg { width: 20px; height: 20px; }
+.mother-login:dir(rtl) .mother-login__submit svg { transform: scaleX(-1); }
+.mother-login__error { margin: 6px 0 0; color: var(--color-text); font-size: 13px; }
+.mother-login__status:empty { display: none; }
+.mother-login__status p { margin: 0; padding: 12px; background: var(--color-light-blue); border-radius: 10px; font-size: 14px; }
+.mother-login__separator { display: flex; align-items: center; gap: 14px; margin: 20px 0; color: var(--color-muted); font-size: 14px; }
+.mother-login__separator::before, .mother-login__separator::after { content: ''; flex: 1; height: 1px; background: var(--color-border); }
+.mother-login__register { display: flex; justify-content: center; align-items: center; gap: 10px; min-height: 52px; padding: 12px 16px; border: 1px solid var(--color-border); border-radius: 13px; text-decoration: none; color: var(--color-text); font-size: 15px; }
+.mother-login__register:hover { background: var(--color-light-pink); border-color: var(--color-accent); }
+.mother-login__register svg { width: 22px; height: 22px; color: var(--color-accent); }
+.mother-login__register strong { font-weight: 600; }
+.mother-login__demo-note { margin: 18px 0 0; text-align: center; font-size: 12px; color: var(--color-muted); }
+/* Physical right placement is intentional in both languages; the card stays centered. */
+.mother-login__toddler { position: absolute; z-index: 1; width: 360px; max-width: none; height: auto; right: -308px; top: 100px; object-fit: contain; pointer-events: none; }
+@media (max-width: 1160px) { .mother-login__toddler { width: 270px; right: -232px; top: 135px; } }
+@media (max-width: 1000px) { .mother-login__toddler { display: none; } }
+@media (max-width: 540px) {
+  .mother-login { padding: 88px 16px 28px; }
+  .mother-login__language { top: 16px; right: 16px; }
+  .mother-login > .mother-login__shell > .mother-login__brand { font-size: 40px; margin-bottom: 24px; }
+  .mother-login__card { padding: 28px 22px; border-radius: 22px; }
+  .mother-login__welcome h1 { font-size: 25px; }
+  .mother-login__welcome p { font-size: 14px; }
+  .mother-login__field { gap: 10px; padding-inline: 12px; }
+}
+
+.mother-login .language-switcher { border-color: var(--color-border); }
+.mother-login .language-switcher button { color: var(--color-primary); }
+.mother-login .language-switcher button[aria-pressed='true'] { color: var(--color-button-text); background: var(--color-light-blue); border-color: var(--color-border); }

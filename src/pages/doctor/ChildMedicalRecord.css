@@ -1,0 +1,99 @@
+.dmr-page { padding: 22px 24px 32px; max-inline-size: 1600px; margin-inline: auto; }
+.dmr-back { border-radius: 24px; min-block-size: 38px; padding: 7px 15px; margin-block-end: 16px; font-weight: 600 !important; }
+.dmr-back svg { inline-size: 18px; block-size: 18px; transform: rotate(180deg); }
+.dmr-page[dir="rtl"] .dmr-back svg { transform: none; }
+.dmr-profile { display: flex; align-items: center; gap: 24px; padding: 24px 30px; border: 1px solid #e8f1fc; border-radius: 18px; background: radial-gradient(ellipse at 100% 0, #fff0f7, transparent 48%), linear-gradient(110deg, #edf7ff, #f8fcff); margin-block-end: 18px; }
+.dmr-avatar { inline-size: 112px; block-size: 112px; font-size: 30px; border: 5px solid #d8efff; border-radius: 50%; flex-shrink: 0; }
+.dmr-profile-content { flex: 1; min-inline-size: 0; }
+.dmr-name { display: flex; gap: 14px; align-items: center; margin-block-end: 20px; flex-wrap: wrap; }
+.dmr-name h2 { font-size: clamp(22px, 2.5vw, 29px); margin: 0; letter-spacing: -.5px; }
+.dmr-gender { border-radius: 20px; color: #2464a4; background: #dff0ff; padding: 4px 12px; font-size: 12px; }
+.dmr-profile-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 0; }
+.dmr-profile-facts > div + div { border-inline-start: 1px solid #d4e4f4; padding-inline-start: 20px; }
+.dmr-profile dt { color: #58779d; font-size: 12px; margin-block-end: 5px; }
+.dmr-profile dd { margin: 0; font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
+.dmr-section-content { min-inline-size: 0; }
+.dmr-layout { display: block; }
+.dmr-quick-actions { grid-column: 1 / -1; }
+.dmr-quick-actions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; }
+.dmr-action { display: flex; align-items: center; gap: 12px; padding: 14px; min-block-size: 66px; border: 1px solid #d7eafb; border-radius: 12px; background: linear-gradient(120deg, #edf7ff, #e4f2ff); color: #205e94; text-align: start; }
+.dmr-action > svg { inline-size: 25px; block-size: 25px; color: #2395e6; }
+.dmr-action > span:not(.dmr-action-arrow) { font-size: 12px; font-weight: 600; line-height: 1.6; }
+.dmr-action-pink { background: linear-gradient(120deg, #fff5fa, #ffebf4); border-color: #f8dce9; color: #914769; }
+.dmr-action-pink > svg { color: #db5891; }
+.dmr-action-arrow { display: flex; margin-inline-start: auto; flex-shrink: 0; }
+.dmr-action-arrow svg { inline-size: 16px; block-size: 16px; }
+.dmr-page[dir="rtl"] .dmr-action-arrow { transform: scaleX(-1); }
+.dmr-coming-soon .dmr-back { margin-block: 22px 0; }
+.dmr-overview { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(245px, 1fr); gap: 16px; align-items: start; }
+.dmr-medical-column, .dmr-information-column { display: grid; gap: 18px; min-inline-size: 0; }
+.dmr-summaries { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.dmr-summary { display: flex; align-items: flex-start; gap: 12px; min-inline-size: 0; padding: 19px 14px; border-radius: 16px; border: 1px solid #e6f2fc; background: linear-gradient(125deg, #f4faff, #ebf6ff); min-block-size: 137px; box-shadow: 0 3px 14px #91aec008; }
+.dmr-summary-pink { background: linear-gradient(125deg, #fff8fb, #fcf0f6); border-color: #fbeaf2; }
+.dmr-summary-icon { display: grid; place-items: center; inline-size: 38px; block-size: 43px; border-radius: 12px; color: #2197ed; background: #dff1ff; flex-shrink: 0; }
+.dmr-summary-pink .dmr-summary-icon { background: #ffe3ef; color: #e35c99; }
+.dmr-summary > div { min-inline-size: 0; }
+.dmr-summary h3 { font-size: 12px; font-weight: 500; margin: 0 0 12px; line-height: 1.4; }
+.dmr-summary strong { font-size: clamp(15px, 1.25vw, 21px); display: block; line-height: 1.35; overflow-wrap: normal; word-break: normal; }
+.dmr-summary small { display: block; font-size: 11px; color: #567399; margin-block-start: 8px; }
+.dmr-panel { border: 1px solid #e0eaf7; border-radius: 16px; padding: 17px; background: #ffffffed; box-shadow: 0 4px 20px #7396c007; min-inline-size: 0; }
+.dmr-panel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-block-end: 14px; flex-wrap: wrap; }
+.dmr-panel-header h3 { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 650; margin: 0; }
+.dmr-panel-header h3 svg { inline-size: 23px; block-size: 23px; color: #2699ee; }
+.dmr-basic-info { margin: 0; }
+.dmr-basic-info > div { display: grid; grid-template-columns: 1fr 1.15fr; gap: 10px; padding-block: 9px; border-block-end: 1px solid #eef3fa; font-size: 12px; }
+.dmr-basic-info > div:last-child { border: 0; padding-block-end: 0; }
+.dmr-basic-info dt { color: #567399; }
+.dmr-basic-info dd { margin: 0; font-weight: 500; overflow-wrap: anywhere; }
+.dmr-notes { padding: 0; margin: 0; list-style: none; }
+.dmr-notes li { padding: 12px; border: 1px solid #e1ebf8; border-radius: 12px; margin-block-start: 10px; }
+.dmr-notes time, .dmr-notes small { color: #55759c; font-size: 11px; }
+.dmr-notes p { font-size: 12px; white-space: pre-wrap; margin-block: 8px; }
+.dmr-notes-empty { padding: 17px 8px 8px; }
+.dmr-notes-empty strong { font-size: 13px; font-weight: 500; }
+.dmr-notes-empty p { font-size: 12px; color: #607a9c; margin-block: 7px 0; }
+.dmr-chart-select { max-inline-size: 100%; }
+.dmr-chart-select select { border: 1px solid #dce8f7; border-radius: 10px; padding: 8px 10px; background: white; color: #23486e; font-size: 12px; max-inline-size: 100%; }
+.dmr-chart { inline-size: 100%; block-size: auto; display: block; direction: ltr; }
+.dmr-chart text { fill: #58789c; font: 11px system-ui, sans-serif; }
+.dmr-chart-empty { min-block-size: 235px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 26px 18px; border-radius: 12px; background: linear-gradient(#f9fcff, #f3f9ff); }
+.dmr-empty-icon { display: grid; place-items: center; color: #6daddb; background: #e7f3ff; border-radius: 14px; inline-size: 50px; block-size: 50px; margin-block-end: 14px; }
+.dmr-chart-empty strong { font-size: 14px; font-weight: 600; }
+.dmr-chart-empty p { font-size: 12px; color: #637b9a; max-inline-size: 290px; margin-block: 8px 0; }
+.dmr-chart-empty small { margin-block-start: 12px; color: #34577f; }
+.dmr-chart-data { font-size: 12px; color: #4c7096; padding-block-start: 8px; }
+.dmr-chart-data summary { cursor: pointer; }
+.dmr-chart-data table { inline-size: 100%; border-collapse: collapse; margin-block-start: 10px; }
+.dmr-chart-data th, .dmr-chart-data td { text-align: start; padding: 7px; border-block-end: 1px solid #e5edf8; }
+.dmr-coming-soon { min-block-size: 360px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 24px; text-align: center; }
+.dmr-coming-soon h3 { font-size: 22px; margin-block-end: 12px; }
+.dmr-coming-soon > strong { border-radius: 20px; color: #92516f; background: #fff0f6; padding: 5px 14px; font-size: 12px; }
+.dmr-coming-soon p { max-inline-size: 360px; margin-block: 18px 0; color: #5b7597; font-size: 14px; }
+.dmr-page[dir="rtl"] .dmr-name h2 { letter-spacing: normal; }
+@media (max-width: 1350px) {
+  .dmr-overview { grid-template-columns: minmax(0, 1fr); }
+  .dmr-information-column { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dmr-summary { min-block-size: 125px; }
+}
+@media (max-width: 1000px) {
+  .dmr-page { padding: 20px 16px; }
+  .dmr-profile { padding: 20px; gap: 18px; }
+  .dmr-avatar { inline-size: 85px; block-size: 85px; }
+  .dmr-profile-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dmr-profile-facts > div + div { padding-inline-start: 0; border: 0; }
+  .dmr-summaries { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dmr-information-column { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 700px) {
+  .dmr-profile { align-items: flex-start; padding: 18px 14px; gap: 14px; }
+  .dmr-avatar { inline-size: 66px; block-size: 66px; border-width: 3px; }
+  .dmr-name { gap: 8px; margin-block-end: 16px; }
+  .dmr-name h2 { font-size: 21px; }
+  .dmr-profile-facts { gap: 14px; }
+  .dmr-profile dd { font-size: 11px; }
+  .dmr-summary { padding: 16px 12px; gap: 9px; }
+  .dmr-summary-icon { inline-size: 30px; block-size: 35px; }
+  .dmr-summary-icon svg { inline-size: 22px; }
+  .dmr-summary h3 { font-size: 11px; }
+  .dmr-summary strong { font-size: 15px; }
+}
