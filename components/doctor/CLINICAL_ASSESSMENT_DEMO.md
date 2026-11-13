@@ -1,0 +1,7 @@
+# Clinical assessment demo
+
+Voiding updates the same record with `status: "voided"`, `voidReason`, `voidedAt` (ISO timestamp), and `voidedBy` (mock doctor's name). Original clinical content, author, ID, and child ID remain intact. Legacy records without a status load as active. Voided records remain visible and cannot be edited or voided again through the demo interface or save helpers. Confirmation requires a nonblank reason; Cancel and Close perform no data mutation. This browser metadata is not a secure or immutable audit log; backend doctor authorization and audit logging remain required.
+
+Assessments use the dashboard patient state and the dedicated versioned localStorage key `nomu.doctor.demoClinicalAssessments.v1`. Only fictional demo records belong here. Records retain their ID, child ID, original author and creation timestamp when edited. Visits, notes and other storage keys are not modified. Browser storage can be cleared or unavailable; visible warnings report loading or persistence failures. This is temporary browser-only persistence, not medical storage or authorization. Real persistence and doctor access checks require the backend.
+
+Open a child record ? Add Assessment. Enter a date, findings and diagnosis, then save. View details, edit the same record, navigate to another child and refresh to verify isolation and persistence. Switch the existing language control to test Arabic and English. Growth, vaccination and milestone actions remain placeholders.

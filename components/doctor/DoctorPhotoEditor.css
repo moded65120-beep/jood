@@ -1,0 +1,6 @@
+﻿.doctor-photo-editor { margin-block: 12px; display: grid; gap: 8px; }
+.doctor-photo-editor button { padding: 8px 12px; border: 1px solid #d7e4f3; border-radius: 12px; background: #eef6ff; color: #24476e; }
+.doctor-photo-editor small { display: block; color: #677a91; }
+.doctor-photo-editor img { display: block; width: 100px; height: 100px; object-fit: cover; border-radius: 16px; margin-block-end: 8px; }
+.doctor-photo-editor button + button { margin-inline-start: 8px; }
+.dd-doctor-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }

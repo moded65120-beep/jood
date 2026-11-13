@@ -1,0 +1,2 @@
+.doctor-patient-initials { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; inline-size: 40px; block-size: 40px; border-radius: 50%; background: #e2f1ff; color: #26649a; font-size: 14px; font-weight: 600; line-height: 1; }
+.doctor-patient-initials--pink { background: #fce5f0; color: #995173; }

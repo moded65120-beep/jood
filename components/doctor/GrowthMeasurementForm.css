@@ -1,0 +1,15 @@
+.growth-measurement-form { display: grid; gap: var(--space-3); }
+.growth-measurement-form__metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2); }
+.growth-measurement-form__field { min-inline-size: 0; }
+.growth-measurement-form__age { margin-block: var(--space-1) 0; color: var(--color-text-secondary, #62676b); font-size: var(--font-size-sm); }
+.growth-measurement-form__warning { margin-block-start: var(--space-1); padding: var(--space-2); background: #fff8e8; color: #73521e; border-inline-start: 3px solid #d1ae68; border-radius: 6px; font-size: var(--font-size-sm); }
+.growth-measurement-form__warning p { margin: 0 0 var(--space-1); }
+.growth-measurement-form__review { display: flex; align-items: start; gap: var(--space-1); cursor: pointer; }
+.growth-measurement-form__review input { flex-shrink: 0; margin-block-start: 0.25em; accent-color: #73521e; }
+.growth-measurement-form__neutral { color: var(--color-text-secondary, #62676b); font-size: var(--font-size-sm); margin: 0; }
+.growth-measurement-form__error { color: #92344d; font-size: var(--font-size-sm); margin-block: var(--space-1) 0; }
+.growth-measurement-form > .nomu-button { justify-self: start; }
+@media (max-width: 48rem) {
+  .growth-measurement-form__metrics { grid-template-columns: 1fr; }
+  .growth-measurement-form > .nomu-button { inline-size: 100%; }
+}
