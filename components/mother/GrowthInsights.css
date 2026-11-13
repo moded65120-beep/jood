@@ -1,0 +1,6 @@
+.growth-insights { background: linear-gradient(125deg, var(--color-white), var(--color-light-blue)); }
+.growth-insights h3 { font-size: var(--font-size-base); color: var(--color-muted); }
+.growth-insights__record, .growth-insights__note, .growth-insights__disclaimer { font-size: var(--font-size-sm); color: var(--color-muted); }
+.growth-insights__position { margin-block: var(--space-2); }
+.growth-insights__review { padding: var(--space-2); background: var(--color-light-pink); border-radius: var(--radius-control); }
+.growth-insights__disclaimer { border-block-start: 1px solid var(--color-border); padding-block-start: var(--space-2); margin-block: var(--space-3) 0; }

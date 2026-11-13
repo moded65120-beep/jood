@@ -1,0 +1,38 @@
+﻿.mother-notifications { position: relative; flex-shrink: 0; }
+.mother-portal .mother-notifications__bell { position: relative; display: grid; place-items: center; inline-size: 48px; block-size: 48px; border: 1px solid #e3ecfa; border-radius: 50%; background: #f5faff; color: #31517a; }
+.mother-notifications__badge { position: absolute; inset-block-start: -3px; inset-inline-end: -5px; min-inline-size: 21px; padding-inline: 5px; border-radius: 12px; background: #f5b6d2; color: #632842; font-size: 12px; font-weight: 700; }
+.mother-notifications__panel { position: absolute; inset-block-start: calc(100% + 12px); inset-inline-end: 0; inline-size: min(370px, calc(100vw - 32px)); max-block-size: min(560px, calc(100dvh - 120px)); display: flex; flex-direction: column; z-index: 100; padding: 12px; border: 1px solid #e2eaf6; border-radius: 18px; background: white; box-shadow: 0 10px 32px #1e33551c; color: var(--color-text); }
+.mother-notifications__panel header { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-shrink: 0; }
+.mother-notifications__panel h2 { margin: 0; font-size: 18px; }
+.mother-notifications__panel header button { background: transparent; min-inline-size: 44px; min-block-size: 44px; font-size: 24px; }
+.mother-portal .mother-notifications__mark { align-self: flex-start; flex-shrink: 0; margin-block: 0 8px; padding: 7px 10px; border-radius: 10px; background: #e8f2ff; font-size: 12px; font-weight: 600; }
+.mother-portal .mother-notifications__mark:disabled { opacity: .5; }
+.mother-notifications__note { flex-shrink: 0; font-size: 11px; line-height: 1.45; color: var(--color-muted); margin-block: 0 10px; }
+.mother-notifications__panel ul { list-style: none; padding: 0; margin: 0; display: grid; align-content: start; gap: 7px; min-block-size: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+.mother-portal .mother-notifications__item { inline-size: 100%; text-align: start; display: grid; grid-template-columns: 30px minmax(0,1fr); align-items: start; gap: 9px; padding: 10px; border: 1px solid #e9edf3; border-radius: 12px; background: #fafbfc; box-shadow: 0 1px 3px #1e335503; overflow-wrap: anywhere; }
+.mother-portal .mother-notifications__item.is-unread { background: #eff7ff; border-color: #daeafd; }
+.mother-portal .mother-notifications__item.is-unread[data-kind='reschedule'] { background: #fff1f7; border-color: #f7dfeb; }
+.mother-notifications__type-icon { display: grid; place-items: center; inline-size: 30px; block-size: 30px; border-radius: 9px; background: #e0efff; color: #3979b8; }
+.mother-notifications__item[data-kind='reschedule'] .mother-notifications__type-icon { background: #fbe0ed; color: #b25b86; }
+.mother-notifications__item:not(.is-unread) .mother-notifications__type-icon { background: #eef1f5; color: #748298; }
+.mother-portal .mother-notifications__type-icon svg { inline-size: 17px; block-size: 17px; }
+.mother-notifications__content { display: grid; gap: 4px; min-inline-size: 0; }
+.mother-notifications__title { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.mother-notifications__title strong { font-size: 13px; font-weight: 700; line-height: 1.4; }
+.mother-notifications__unread-dot { inline-size: 6px; block-size: 6px; flex-shrink: 0; border-radius: 50%; background: #4797dd; }
+.mother-notifications__description { font-size: 12px; line-height: 1.45; color: #64718a; }
+.mother-notifications__child { font-weight: 600; color: #415777; }
+.mother-notifications__appointment { font-size: 12px; line-height: 1.5; color: #3f587b; }
+.mother-notifications__appointment time { display: inline-block; }
+.mother-notifications__original, .mother-notifications__created { font-size: 10px; line-height: 1.5; color: #7a8699; }
+.mother-notifications__sr-only { position: absolute; inline-size: 1px; block-size: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 800px) { .mother-notifications__panel { position: fixed; inset-inline: 16px; inset-block-start: 170px; inline-size: auto; max-block-size: calc(100dvh - 190px); } }
+
+/* Isolate text runs without altering the dropdown's geometry or styling. */
+.mother-notifications__panel { text-align: start; }
+.mother-notifications__content,
+.mother-notifications__title strong,
+.mother-notifications__description,
+.mother-notifications__original,
+.mother-notifications__created { text-align: start; unicode-bidi: isolate; }
+.mother-notifications__panel bdi { unicode-bidi: isolate; }
