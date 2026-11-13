@@ -1,0 +1,4 @@
+# Do not commit credentials or runtime secrets.
+.env
+.env.*
+!.env.example
